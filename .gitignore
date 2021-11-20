@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ShoppingApp
+/ShoppingApp/bin/Debug/net5.0
+/ShoppingApp/Logs
+/ShoppingApp/obj
+/ShoppingApp/Properties
+/ShoppingAppTest/bin/Debug/net5.0
+/ShoppingAppTest/obj

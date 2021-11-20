@@ -1,0 +1,4 @@
+MSBUILD : error MSB1008: Only one project can be specified.
+Switch: test
+
+For switch syntax, type "MSBuild -help"

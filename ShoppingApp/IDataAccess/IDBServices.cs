@@ -16,6 +16,7 @@
         Task<List<Product>> GetProductList();
         Task<List<Product>> GetProductList(SortAndFilter sortFilter);
         Task<Product> GetProductById(int productId);
+        Task<List<Product>> GetProductByListOfId(List<string> productIdList);
         Task UpdateProduct(Product product);
         Task DeleteProduct(Product product);
         Task<bool> ProductExists(int productId);

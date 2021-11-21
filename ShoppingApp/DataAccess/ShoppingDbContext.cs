@@ -15,5 +15,6 @@ namespace ShoppingApp.DataAccess
         public DbSet<UserDetails> UserDetails { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Cart> Cart { get; set; }
+        public DbSet<OrderAndPayment> OrderAndPayments { get; set; }
     }
 }

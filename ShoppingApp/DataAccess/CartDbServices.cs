@@ -42,9 +42,15 @@
             return await _dbContext.Cart.FirstOrDefaultAsync(x => x.CartId == cartId);
         }
 
-        public async Task<Cart> CartItemExistsByProductId(int productId)
+        public async Task<Cart> CartItemExistsByProductId(int productId, string userId)
         {
-            return await _dbContext.Cart.FirstOrDefaultAsync(x => x.ProductId == productId);
+            return await _dbContext.Cart.FirstOrDefaultAsync(x => x.ProductId == productId && x.TokenUserId == userId);
+        }
+
+        public async Task BulkCartDelete(List<Cart> cart)
+        {
+            _dbContext.Cart.RemoveRange(cart);
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

@@ -10,7 +10,8 @@
         Task AddToCart(Cart cart);
         Task Edit(Cart cart);
         Task Delete(Cart cart);
+        Task BulkCartDelete(List<Cart> cart);
         Task<Cart> CartItemExists(int cartId);
-        Task<Cart> CartItemExistsByProductId(int productId);
+        Task<Cart> CartItemExistsByProductId(int productId, string userId);
     }
 }

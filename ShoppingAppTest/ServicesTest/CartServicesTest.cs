@@ -56,7 +56,7 @@
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
-            _cartDbService.Setup(x => x.CartItemExistsByProductId(cart.CartId));
+            _cartDbService.Setup(x => x.CartItemExistsByProductId(cart.CartId, userId));
             _cartDbService.Setup(x => x.AddToCart(cart));
             //Act
             await _cartServices.AddToCart(cart);
@@ -69,7 +69,7 @@
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
-            _cartDbService.Setup(x => x.CartItemExistsByProductId(cart.CartId)).ReturnsAsync(cart);
+            _cartDbService.Setup(x => x.CartItemExistsByProductId(cart.CartId, userId)).ReturnsAsync(cart);
             _cartDbService.Setup(x => x.Edit(cart));
             //Act
             await _cartServices.AddToCart(cart);

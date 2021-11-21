@@ -46,7 +46,7 @@ namespace ShoppingApp.Services
 
         public async Task AddToCart(Cart cart)
         {
-            var existingCart = await _cartDbService.CartItemExistsByProductId(cart.ProductId);
+            var existingCart = await _cartDbService.CartItemExistsByProductId(cart.ProductId, cart.TokenUserId);
             if (existingCart != null)
             {
                 _logger.LogInformation("Product already in cart. Increased product count by 1.");

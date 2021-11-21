@@ -72,5 +72,10 @@
         {
             return await _dbContext.Products.AnyAsync(x => x.ProductId == productId);
         }
+
+        public async Task<List<Product>> GetProductByListOfId(List<string> productIdList)
+        {
+            return await _dbContext.Products.Where(x => productIdList.Contains(x.ProductId.ToString())).Distinct().ToListAsync();
+        }
     }
 }

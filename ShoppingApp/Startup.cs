@@ -8,14 +8,13 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using ShoppingApp.Common;
-using ShoppingApp.DataAccess;
-using ShoppingApp.IDataAccess;
-using ShoppingApp.Interfaces;
-using ShoppingApp.Model;
-using ShoppingApp.ServiceInterfaces;
-using ShoppingApp.Services;
-using ShoppingApp.Validation;
+using ShoppingApp.DataAccess.DataAccess;
+using ShoppingApp.DataAccess.IDataAccess;
+using ShoppingApp.Services.IServices;
+using ShoppingApp.Models.Model;
+using ShoppingApp.Services.Validation;
 using System.IO;
+using ShoppingApp.Services.Services;
 
 namespace ShoppingApp
 {

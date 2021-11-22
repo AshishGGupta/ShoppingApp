@@ -1,10 +1,8 @@
-﻿using ShoppingApp.Model;
-using ShoppingApp.Model.Domain;
+﻿using ShoppingApp.Models.Model;
+using ShoppingApp.Models.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShoppingAppTest.Common
 {

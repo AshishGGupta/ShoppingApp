@@ -2,9 +2,9 @@
 {
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
-    using ShoppingApp.Interfaces;
-    using ShoppingApp.Model;
-    using ShoppingApp.Validation;
+    using ShoppingApp.Services.IServices;
+    using ShoppingApp.Models.Model;
+    using ShoppingApp.Services.Validation;
     using System.Threading.Tasks;
 
     [ServiceFilter(typeof(UserValidationAttribute))]

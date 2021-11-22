@@ -3,10 +3,10 @@
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
-    using ShoppingApp.Interfaces;
-    using ShoppingApp.Model;
-    using ShoppingApp.Model.Domain;
-    using ShoppingApp.Validation;
+    using ShoppingApp.Services.IServices;
+    using ShoppingApp.Models.Model;
+    using ShoppingApp.Models.Domain;
+    using ShoppingApp.Services.Validation;
     using System.Linq;
     using System.Security.Claims;
     using System.Threading.Tasks;

@@ -9,3 +9,11 @@
 /ShoppingApp/Properties
 /ShoppingAppTest/bin/Debug/net5.0
 /ShoppingAppTest/obj
+/shoppingApp.Models/bin/Debug/net5.0
+/shoppingApp.Models/obj
+/ShoppingApp.DataAccess/obj
+/ShoppingApp.Common/bin/Debug/net5.0
+/ShoppingApp.Common/obj
+/ShoppingApp.DataAccess/bin/Debug/net5.0
+/ShoppingApp.Services/bin/Debug/net5.0
+/ShoppingApp.Services/obj

@@ -2,14 +2,11 @@
 {
     using Microsoft.Extensions.Logging;
     using Moq;
-    using ShoppingApp.IDataAccess;
-    using ShoppingApp.Model;
-    using ShoppingApp.Services;
+    using ShoppingApp.DataAccess.IDataAccess;
+    using ShoppingApp.Models.Model;
+    using ShoppingApp.Services.Services;
     using ShoppingAppTest.Common;
-    using System;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
     using System.Threading.Tasks;
     using Xunit;
 

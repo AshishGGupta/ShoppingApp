@@ -5,7 +5,7 @@
     using Microsoft.Extensions.Logging;
     using Moq;
     using ShoppingApp.Controllers;
-    using ShoppingApp.Interfaces;
+    using ShoppingApp.Services.IServices;
     using ShoppingAppTest.Common;
     using System.Linq;
     using System.Security.Claims;

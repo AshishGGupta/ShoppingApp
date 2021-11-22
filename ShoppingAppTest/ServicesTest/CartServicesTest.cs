@@ -2,8 +2,8 @@
 {
     using Microsoft.Extensions.Logging;
     using Moq;
-    using ShoppingApp.IDataAccess;
-    using ShoppingApp.Services;
+    using ShoppingApp.DataAccess.IDataAccess;
+    using ShoppingApp.Services.Services;
     using ShoppingAppTest.Common;
     using System.Linq;
     using System.Threading.Tasks;

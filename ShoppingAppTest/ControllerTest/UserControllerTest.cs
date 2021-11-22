@@ -4,8 +4,8 @@
     using Microsoft.Extensions.Logging;
     using Moq;
     using ShoppingApp.Controllers;
-    using ShoppingApp.Interfaces;
-    using ShoppingApp.Model;
+    using ShoppingApp.Services.IServices;
+    using ShoppingApp.Models.Model;
     using Xunit;
 
     public class UserControllerTest

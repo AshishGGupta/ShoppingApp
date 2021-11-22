@@ -2,7 +2,7 @@
 {
     public class LoginDetails
     {
-        public string Audience { get; set; }
+        public string audience { get; set; }
 
         public string LoginURL { get; set; }
 

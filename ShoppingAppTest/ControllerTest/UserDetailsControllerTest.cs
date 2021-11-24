@@ -40,123 +40,123 @@
         }
 
         [Fact]
-        public void GetUserDetails_UnauthorizedUser()
+        public async Task GetUserDetails_UnauthorizedUser()
         {
             //Act
-            var result = _userDetailsController.GetUserDetails("user890").Result;
+            var result = await _userDetailsController.GetUserDetails("user890");
             //Assert
             Assert.Equal(401, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void GetUserDetails_SuccessfullyFetchCartDetails()
+        public async Task GetUserDetails_SuccessfullyFetchCartDetails()
         {
             //Arrange
             _userDetailsServices.Setup(x => x.GetUserDetails(userId)).ReturnsAsync(_getData.GetUserDetailsData());
             //Act
-            var result = _userDetailsController.GetUserDetails(userId).Result;
+            var result = await _userDetailsController.GetUserDetails(userId);
             //Assert
             Assert.Equal(200, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void GetUserDetails_NotDetialsFound()
+        public async Task GetUserDetails_NotDetialsFound()
         {
             //Arrange
             _userDetailsServices.Setup(x => x.GetUserDetails(userId));
             //Act
-            var result = _userDetailsController.GetUserDetails(userId).Result;
+            var result = await _userDetailsController.GetUserDetails(userId);
             //Assert
             Assert.Equal(404, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void AddUserDetails_UnauthorizedUser()
+        public async Task AddUserDetails_UnauthorizedUser()
         {
             //Arrange
             var userDetail = _getData.GetUserDetailsData().FirstOrDefault();
             userDetail.TokenUserId = "user890";
             //Act
-            var result = _userDetailsController.AddUserDetails(userDetail).Result;
+            var result = await _userDetailsController.AddUserDetails(userDetail);
             //Assert
             Assert.Equal(401, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void AddUserDetails_SuccessfullyAddedToCart()
+        public async Task AddUserDetails_SuccessfullyAddedToCart()
         {
             //Arrange
             var userDetail = _getData.GetUserDetailsData().FirstOrDefault();
             _userDetailsServices.Setup(x => x.AddUserDetail(userDetail));
             //Act
-            var result = _userDetailsController.AddUserDetails(userDetail).Result;
+            var result = await _userDetailsController.AddUserDetails(userDetail);
             //Assert
             Assert.Equal(200, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void UpdateUserDetails_UnauthorizedUser()
+        public async Task UpdateUserDetails_UnauthorizedUser()
         {
             //Arrange
             var userDetail = _getData.GetUserDetailsData().FirstOrDefault();
             userDetail.TokenUserId = "user890";
             //Act
-            var result = _userDetailsController.UpdateUserDetails(userDetail).Result;
+            var result = await _userDetailsController.UpdateUserDetails(userDetail);
             //Assert
             Assert.Equal(401, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void UpdateUserDetails_SuccessfullyAddedToCart()
+        public async Task UpdateUserDetails_SuccessfullyAddedToCart()
         {
             //Arrange
             var userDetail = _getData.GetUserDetailsData().FirstOrDefault();
             _userDetailsServices.Setup(x => x.EditUserDetail(userDetail)).ReturnsAsync(true);
             //Act
-            var result = _userDetailsController.UpdateUserDetails(userDetail).Result;
+            var result = await _userDetailsController.UpdateUserDetails(userDetail);
             //Assert
             Assert.Equal(200, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void UpdateUserDetails_NotDetialsFound()
+        public async Task UpdateUserDetails_NotDetialsFound()
         {
             //Arrange
             var userDetail = _getData.GetUserDetailsData().FirstOrDefault();
             _userDetailsServices.Setup(x => x.EditUserDetail(userDetail)).ReturnsAsync(false);
             //Act
-            var result = _userDetailsController.UpdateUserDetails(userDetail).Result;
+            var result = await _userDetailsController.UpdateUserDetails(userDetail);
             //Assert
             Assert.Equal(404, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void DeleteUserDetails_UnauthorizedUser()
+        public async Task DeleteUserDetails_UnauthorizedUser()
         {
             //Act
-            var result = _userDetailsController.DeleteUserDetails(1, "user890").Result;
+            var result = await _userDetailsController.DeleteUserDetails(1, "user890");
             //Assert
             Assert.Equal(401, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void DeleteUserDetails_SuccessfullyAddedToCart()
+        public async Task DeleteUserDetails_SuccessfullyAddedToCart()
         {
             //Arrange
             _userDetailsServices.Setup(x => x.DeleteUserDetail(1, userId)).ReturnsAsync(true);
             //Act
-            var result = _userDetailsController.DeleteUserDetails(1, userId).Result;
+            var result = await _userDetailsController.DeleteUserDetails(1, userId);
             //Assert
             Assert.Equal(200, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void DeleteUserDetails_NotDetialsFound()
+        public async Task DeleteUserDetails_NotDetialsFound()
         {
             //Arrange
             _userDetailsServices.Setup(x => x.DeleteUserDetail(1, userId)).ReturnsAsync(false);
             //Act
-            var result = _userDetailsController.DeleteUserDetails(1, userId).Result;
+            var result = await _userDetailsController.DeleteUserDetails(1, userId);
             //Assert
             Assert.Equal(404, (result as ObjectResult).StatusCode);
         }

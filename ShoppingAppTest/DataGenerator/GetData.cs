@@ -10,7 +10,7 @@ namespace ShoppingAppTest.Common
     {
         public CartResponse GetCartResponseData()
         {
-            return new CartResponse( GetProductQuantityData(), GetUserDetailsData(), "Data Found Successfully");
+            return new CartResponse(GetProductQuantityData(), GetUserDetailsData(), "Data Found Successfully");
         }
 
         public List<ProductQuantity> GetProductQuantityData()
@@ -126,6 +126,72 @@ namespace ShoppingAppTest.Common
                 _Id = "user123",
                 Access_token = "user123",
                 Email_verified = "true"
+            };
+        }
+
+        public OrderAndPaymentRequest GetOrderAndPaymentRequest()
+        {
+            return new OrderAndPaymentRequest()
+            {
+                TokenUserId = "user123",
+                PaymentType = "COD",
+                UserDetailsId = 1
+            };
+        }
+
+        public List<OrderAndPaymentResponse> GetOrderAndPaymentResponse()
+        {
+            return new List<OrderAndPaymentResponse>()
+            {
+                new OrderAndPaymentResponse()
+                {
+                    OrderDate = DateTime.Now,
+                    OrderId = 1,
+                    PaymentType = "COD",
+                    Products = GetProductsData(),
+                    TokenUserId = "user123",
+                    TotalQuantity = 2,
+                    UserDetail = GetUserDetailsData().FirstOrDefault()
+                },
+                new OrderAndPaymentResponse()
+                {
+                    OrderDate = DateTime.Now,
+                    OrderId = 2,
+                    PaymentType = "COD",
+                    Products = GetProductsData(),
+                    TokenUserId = "user123",
+                    TotalQuantity = 2,
+                    UserDetail = GetUserDetailsData().FirstOrDefault()
+                }
+            };
+        }
+
+        public List<OrderAndPayment> GetOrderAndPaymentdetails()
+        {
+            return new List<OrderAndPayment>()
+            {
+                new OrderAndPayment()
+                {
+                    OrderDate = DateTime.Now,
+                    OrderId = 1,
+                    Quantity = 1,
+                    PaymentType = "Cod",
+                    ProductId = "[1]",
+                    TokenUserId = "user123",
+                    UserDetailsId = 1,
+                    UserDetail = GetUserDetailsData().FirstOrDefault()
+                },
+                new OrderAndPayment()
+                {
+                    OrderDate = DateTime.Now,
+                    OrderId = 1,
+                    Quantity = 1,
+                    PaymentType = "Cod",
+                    ProductId = "[2]",
+                    TokenUserId = "user123",
+                    UserDetailsId = 1,
+                    UserDetail = GetUserDetailsData().FirstOrDefault()
+                }
             };
         }
     }

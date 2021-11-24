@@ -7,6 +7,7 @@
     using ShoppingApp.Services.IServices;
     using ShoppingApp.Models.Model;
     using Xunit;
+    using System.Threading.Tasks;
 
     public class UserControllerTest
     {
@@ -23,7 +24,7 @@
         }
 
         [Fact]
-        public void SignUp_Success()
+        public async Task SignUp_Success()
         {
             //Arrange
             UserModel userModel = new UserModel()
@@ -33,13 +34,13 @@
             };
             _userServices.Setup(x => x.UserSignUp(userModel)).ReturnsAsync(new ApiResponse());
             //Act
-            var result = _userController.SignUp(userModel).Result;
+            var result = await _userController.SignUp(userModel);
             //Assert
             Assert.Equal(200, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void Login_Success()
+        public async Task Login_Success()
         {
             //Arrange
             UserModel userModel = new UserModel()
@@ -49,7 +50,7 @@
             };
             _userServices.Setup(x => x.UserLogin(userModel)).ReturnsAsync(new ApiResponse());
             //Act
-            var result = _userController.Login(userModel).Result;
+            var result = await _userController.Login(userModel);
             //Assert
             Assert.Equal(200, (result as ObjectResult).StatusCode);
         }

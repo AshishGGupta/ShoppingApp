@@ -1,23 +1,25 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
-using Serilog;
-using ShoppingApp.Common;
-using ShoppingApp.DataAccess.DataAccess;
-using ShoppingApp.DataAccess.IDataAccess;
-using ShoppingApp.Services.IServices;
-using ShoppingApp.Models.Model;
-using ShoppingApp.Services.Validation;
-using System.IO;
-using ShoppingApp.Services.Services;
-
 namespace ShoppingApp
 {
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Hosting;
+    using Microsoft.OpenApi.Models;
+    using Serilog;
+    using ShoppingApp.Common;
+    using ShoppingApp.DataAccess.DataAccess;
+    using ShoppingApp.DataAccess.IDataAccess;
+    using ShoppingApp.Services.IServices;
+    using ShoppingApp.Models.Model;
+    using ShoppingApp.Services.Validation;
+    using System.IO;
+    using ShoppingApp.Services.Services;
+    using System.Diagnostics.CodeAnalysis;
+
+    [ExcludeFromCodeCoverage]
     public class Startup
     {
         public Startup(IConfiguration configuration)

@@ -9,6 +9,7 @@
     using ShoppingAppTest.Common;
     using System.Linq;
     using System.Security.Claims;
+    using System.Threading.Tasks;
     using Xunit;
     public class CartControllerTest
     {
@@ -44,123 +45,123 @@
         }
 
         [Fact]
-        public void GetCartDetails_UnauthorizedUser()
+        public async Task GetCartDetails_UnauthorizedUser()
         {
             //Act
-            var result = _cartController.GetCartDetails("user890").Result;
+            var result = await _cartController.GetCartDetails("user890");
             //Assert
             Assert.Equal(401, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void GetCartDetails_SuccessfullyFetchCartDetails()
+        public async Task GetCartDetails_SuccessfullyFetchCartDetails()
         {
             //Arrange
             _cartServices.Setup(x => x.GetCartDetails(userId)).ReturnsAsync(_getData.GetCartResponseData());
             //Act
-            var result = _cartController.GetCartDetails(userId).Result;
+            var result = await _cartController.GetCartDetails(userId);
             //Assert
             Assert.Equal(200, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void GetCartDetails_NotDetialsFound()
+        public async Task GetCartDetails_NotDetialsFound()
         {
             //Arrange
             _cartServices.Setup(x => x.GetCartDetails(userId));
             //Act
-            var result = _cartController.GetCartDetails(userId).Result;
+            var result = await _cartController.GetCartDetails(userId);
             //Assert
             Assert.Equal(404, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void AddToCart_UnauthorizedUser()
+        public async Task AddToCart_UnauthorizedUser()
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
             cart.TokenUserId = "user890";
             //Act
-            var result = _cartController.AddToCart(cart).Result;
+            var result = await _cartController.AddToCart(cart);
             //Assert
             Assert.Equal(401, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void AddToCart_SuccessfullyAddedToCart()
+        public async Task AddToCart_SuccessfullyAddedToCart()
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
             _cartServices.Setup(x => x.AddToCart(cart));
             //Act
-            var result = _cartController.AddToCart(cart).Result;
+            var result = await _cartController.AddToCart(cart);
             //Assert
             Assert.Equal(200, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void UpdateCartDetails_UnauthorizedUser()
+        public async Task UpdateCartDetails_UnauthorizedUser()
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
             cart.TokenUserId = "user890";
             //Act
-            var result = _cartController.UpdateCartDetails(cart).Result;
+            var result = await _cartController.UpdateCartDetails(cart);
             //Assert
             Assert.Equal(401, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void UpdateCartDetails_SuccessfullyAddedToCart()
+        public async Task UpdateCartDetails_SuccessfullyAddedToCart()
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
             _cartServices.Setup(x => x.Edit(cart)).ReturnsAsync(true);
             //Act
-            var result = _cartController.UpdateCartDetails(cart).Result;
+            var result = await _cartController.UpdateCartDetails(cart);
             //Assert
             Assert.Equal(200, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void UpdateCartDetails_NotDetialsFound()
+        public async Task UpdateCartDetails_NotDetialsFound()
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
             _cartServices.Setup(x => x.Edit(cart)).ReturnsAsync(false);
             //Act
-            var result = _cartController.UpdateCartDetails(cart).Result;
+            var result = await _cartController.UpdateCartDetails(cart);
             //Assert
             Assert.Equal(404, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void DeleteFromCart_UnauthorizedUser()
+        public async Task DeleteFromCart_UnauthorizedUser()
         {
             //Act
-            var result = _cartController.DeleteFromCart(1, "user890").Result;
+            var result = await _cartController.DeleteFromCart(1, "user890");
             //Assert
             Assert.Equal(401, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void DeleteFromCart_SuccessfullyAddedToCart()
+        public async Task DeleteFromCart_SuccessfullyAddedToCart()
         {
             //Arrange
             _cartServices.Setup(x => x.Delete(1)).ReturnsAsync(true);
             //Act
-            var result = _cartController.DeleteFromCart(1, userId).Result;
+            var result = await _cartController.DeleteFromCart(1, userId);
             //Assert
             Assert.Equal(200, (result as ObjectResult).StatusCode);
         }
 
         [Fact]
-        public void DeleteFromCart_NotDetialsFound()
+        public async Task DeleteFromCart_NotDetialsFound()
         {
             //Arrange
             _cartServices.Setup(x => x.Delete(1)).ReturnsAsync(false);
             //Act
-            var result = _cartController.DeleteFromCart(1, userId).Result;
+            var result = await _cartController.DeleteFromCart(1, userId);
             //Assert
             Assert.Equal(404, (result as ObjectResult).StatusCode);
         }

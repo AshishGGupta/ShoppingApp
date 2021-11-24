@@ -51,9 +51,6 @@
                 case ProductTypeEnum.ExpiryDate:
                     productExp = x => x.ExpiryDate;
                     break;
-                default:
-                    productExp = x => x.Name;
-                    break;
             }
             return productExp;
         }

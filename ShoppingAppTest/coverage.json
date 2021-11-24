@@ -1,0 +1,4685 @@
+{
+  "ShoppingApp.Common.dll": {
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.Common\\Mapper.cs": {
+      "ShoppingApp.Common.Mapper": {
+        "ShoppingApp.Models.Domain.OrderAndPayment ShoppingApp.Common.Mapper::MapOrderAndPaymentDetail(ShoppingApp.Models.Model.OrderAndPaymentRequest,System.Collections.Generic.List`1<ShoppingApp.Models.Domain.Cart>)": {
+          "Lines": {
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 2,
+            "21": 1,
+            "22": 1,
+            "23": 1
+          },
+          "Branches": [
+            {
+              "Line": 14,
+              "Offset": 47,
+              "EndOffset": 49,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 14,
+              "Offset": 47,
+              "EndOffset": 52,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Collections.Generic.List`1<ShoppingApp.Models.Model.OrderAndPaymentResponse> ShoppingApp.Common.Mapper::MapOrderPaymentResponse(System.Collections.Generic.List`1<ShoppingApp.Models.Domain.OrderAndPayment>,System.Collections.Generic.List`1<ShoppingApp.Models.Domain.Product>)": {
+          "Lines": {
+            "26": 1,
+            "27": 3,
+            "28": 3,
+            "29": 3,
+            "30": 3,
+            "31": 3,
+            "32": 3,
+            "33": 3,
+            "34": 3,
+            "35": 4,
+            "36": 3,
+            "37": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.Common\\ProductSortAndFilter.cs": {
+      "ShoppingApp.Common.ProductSortAndFilter": {
+        "System.Linq.IQueryable`1<ShoppingApp.Models.Domain.Product> ShoppingApp.Common.ProductSortAndFilter::GetSortAndFilterQuery(System.Linq.IQueryable`1<ShoppingApp.Models.Domain.Product>,ShoppingApp.Models.Model.SortAndFilter)": {
+          "Lines": {
+            "12": 5,
+            "14": 5,
+            "15": 5,
+            "16": 5,
+            "17": 5,
+            "18": 5,
+            "19": 5,
+            "20": 5,
+            "21": 5,
+            "22": 5,
+            "24": 5,
+            "25": 5,
+            "26": 5,
+            "27": 5,
+            "28": 5,
+            "30": 5,
+            "31": 5,
+            "32": 5
+          },
+          "Branches": [
+            {
+              "Line": 14,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 5
+            },
+            {
+              "Line": 14,
+              "Offset": 2,
+              "EndOffset": 10,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 14,
+              "Offset": 13,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 5
+            },
+            {
+              "Line": 16,
+              "Offset": 35,
+              "EndOffset": 37,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 5
+            },
+            {
+              "Line": 19,
+              "Offset": 68,
+              "EndOffset": 70,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 3
+            },
+            {
+              "Line": 19,
+              "Offset": 68,
+              "EndOffset": 85,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 2
+            },
+            {
+              "Line": 16,
+              "Offset": 35,
+              "EndOffset": 101,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 5
+            },
+            {
+              "Line": 24,
+              "Offset": 117,
+              "EndOffset": 119,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 5
+            },
+            {
+              "Line": 24,
+              "Offset": 117,
+              "EndOffset": 146,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 5
+            },
+            {
+              "Line": 14,
+              "Offset": 13,
+              "EndOffset": 147,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 5
+            }
+          ]
+        },
+        "System.Linq.Expressions.Expression`1<System.Func`2<ShoppingApp.Models.Domain.Product,System.Object>> ShoppingApp.Common.ProductSortAndFilter::GetSortQuery(ShoppingApp.Common.ProductTypeEnum)": {
+          "Lines": {
+            "35": 5,
+            "36": 5,
+            "37": 5,
+            "40": 1,
+            "41": 1,
+            "43": 1,
+            "44": 1,
+            "46": 1,
+            "47": 1,
+            "49": 1,
+            "50": 1,
+            "52": 1,
+            "53": 1,
+            "55": 5,
+            "56": 5
+          },
+          "Branches": [
+            {
+              "Line": 37,
+              "Offset": 8,
+              "EndOffset": 38,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 37,
+              "Offset": 8,
+              "EndOffset": 101,
+              "Path": 3,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 37,
+              "Offset": 8,
+              "EndOffset": 179,
+              "Path": 2,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 37,
+              "Offset": 8,
+              "EndOffset": 242,
+              "Path": 4,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 37,
+              "Offset": 8,
+              "EndOffset": 317,
+              "Path": 5,
+              "Ordinal": 5,
+              "Hits": 1
+            },
+            {
+              "Line": 37,
+              "Offset": 8,
+              "EndOffset": 392,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 5
+            }
+          ]
+        },
+        "System.Linq.IQueryable`1<ShoppingApp.Models.Domain.Product> ShoppingApp.Common.ProductSortAndFilter::GetFilterQuery(System.Linq.IQueryable`1<ShoppingApp.Models.Domain.Product>,ShoppingApp.Common.ProductTypeEnum,ShoppingApp.Models.Model.SortAndFilter)": {
+          "Lines": {
+            "59": 5,
+            "63": 3,
+            "64": 3,
+            "66": 1,
+            "67": 1,
+            "68": 1,
+            "70": 1,
+            "71": 1,
+            "73": 5,
+            "74": 5
+          },
+          "Branches": [
+            {
+              "Line": 59,
+              "Offset": 25,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            },
+            {
+              "Line": 59,
+              "Offset": 25,
+              "EndOffset": 200,
+              "Path": 3,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 59,
+              "Offset": 25,
+              "EndOffset": 566,
+              "Path": 2,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 59,
+              "Offset": 25,
+              "EndOffset": 692,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 5
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ShoppingApp.DataAccess.dll": {
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\Migrations\\20211114145250_InitialDBCreation.cs": {
+      "ShoppingApp.Migrations.InitialDBCreation": {
+        "System.Void ShoppingApp.Migrations.InitialDBCreation::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0
+          },
+          "Branches": []
+        },
+        "System.Void ShoppingApp.Migrations.InitialDBCreation::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "111": 0,
+            "112": 0,
+            "114": 0,
+            "115": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\Migrations\\20211114145250_InitialDBCreation.Designer.cs": {
+      "ShoppingApp.Migrations.InitialDBCreation": {
+        "System.Void ShoppingApp.Migrations.InitialDBCreation::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "159": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\Migrations\\20211114150729_updatedProductModel.cs": {
+      "ShoppingApp.Migrations.updatedProductModel": {
+        "System.Void ShoppingApp.Migrations.updatedProductModel::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Void ShoppingApp.Migrations.updatedProductModel::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\Migrations\\20211114150729_updatedProductModel.Designer.cs": {
+      "ShoppingApp.Migrations.updatedProductModel": {
+        "System.Void ShoppingApp.Migrations.updatedProductModel::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "159": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\Migrations\\20211117144521_ColumnValidationAdded.cs": {
+      "ShoppingApp.Migrations.ColumnValidationAdded": {
+        "System.Void ShoppingApp.Migrations.ColumnValidationAdded::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0
+          },
+          "Branches": []
+        },
+        "System.Void ShoppingApp.Migrations.ColumnValidationAdded::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\Migrations\\20211117144521_ColumnValidationAdded.Designer.cs": {
+      "ShoppingApp.Migrations.ColumnValidationAdded": {
+        "System.Void ShoppingApp.Migrations.ColumnValidationAdded::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "166": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\Migrations\\20211121124128_AddedOrderAndPaymentDetails.cs": {
+      "ShoppingApp.Migrations.AddedOrderAndPaymentDetails": {
+        "System.Void ShoppingApp.Migrations.AddedOrderAndPaymentDetails::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        },
+        "System.Void ShoppingApp.Migrations.AddedOrderAndPaymentDetails::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\Migrations\\20211121124128_AddedOrderAndPaymentDetails.Designer.cs": {
+      "ShoppingApp.Migrations.AddedOrderAndPaymentDetails": {
+        "System.Void ShoppingApp.Migrations.AddedOrderAndPaymentDetails::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "177": 0,
+            "178": 0,
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "188": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "197": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0,
+            "202": 0,
+            "203": 0,
+            "204": 0,
+            "205": 0,
+            "206": 0,
+            "207": 0,
+            "209": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\Migrations\\20211121143150_AddedOrderDateInOrderAndPayment.cs": {
+      "ShoppingApp.Migrations.AddedOrderDateInOrderAndPayment": {
+        "System.Void ShoppingApp.Migrations.AddedOrderDateInOrderAndPayment::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Void ShoppingApp.Migrations.AddedOrderDateInOrderAndPayment::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\Migrations\\20211121143150_AddedOrderDateInOrderAndPayment.Designer.cs": {
+      "ShoppingApp.Migrations.AddedOrderDateInOrderAndPayment": {
+        "System.Void ShoppingApp.Migrations.AddedOrderDateInOrderAndPayment::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "178": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "188": 0,
+            "189": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "200": 0,
+            "201": 0,
+            "202": 0,
+            "203": 0,
+            "205": 0,
+            "206": 0,
+            "207": 0,
+            "208": 0,
+            "209": 0,
+            "210": 0,
+            "212": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\Migrations\\ShoppingDbContextModelSnapshot.cs": {
+      "ShoppingApp.Migrations.ShoppingDbContextModelSnapshot": {
+        "System.Void ShoppingApp.Migrations.ShoppingDbContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "15": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "178": 0,
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0,
+            "201": 0,
+            "203": 0,
+            "204": 0,
+            "205": 0,
+            "206": 0,
+            "207": 0,
+            "208": 0,
+            "210": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\DataAccess\\CartDbServices.cs": {
+      "ShoppingApp.DataAccess.DataAccess.CartDbServices": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.CartDbServices::.ctor(ShoppingApp.DataAccess.DataAccess.ShoppingDbContext)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.CartDbServices/<AddToCart>d__2": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.CartDbServices/<AddToCart>d__2::MoveNext()": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.CartDbServices/<BulkCartDelete>d__8": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.CartDbServices/<BulkCartDelete>d__8::MoveNext()": {
+          "Lines": {
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.CartDbServices/<CartItemExists>d__6": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.CartDbServices/<CartItemExists>d__6::MoveNext()": {
+          "Lines": {
+            "41": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.CartDbServices/<CartItemExistsByProductId>d__7": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.CartDbServices/<CartItemExistsByProductId>d__7::MoveNext()": {
+          "Lines": {
+            "46": 0,
+            "47": 0,
+            "48": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.CartDbServices/<Delete>d__5": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.CartDbServices/<Delete>d__5::MoveNext()": {
+          "Lines": {
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.CartDbServices/<Edit>d__3": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.CartDbServices/<Edit>d__3::MoveNext()": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.CartDbServices/<GetCartDetails>d__4": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.CartDbServices/<GetCartDetails>d__4::MoveNext()": {
+          "Lines": {
+            "30": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\DataAccess\\DBServices.cs": {
+      "ShoppingApp.DataAccess.DataAccess.DBServices": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.DBServices::.ctor(ShoppingApp.DataAccess.DataAccess.ShoppingDbContext,ShoppingApp.Common.ProductSortAndFilter)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.DBServices/<AddProduct>d__5": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.DBServices/<AddProduct>d__5::MoveNext()": {
+          "Lines": {
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.DBServices/<DeleteProduct>d__10": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.DBServices/<DeleteProduct>d__10::MoveNext()": {
+          "Lines": {
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.DBServices/<GetProductById>d__8": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.DBServices/<GetProductById>d__8::MoveNext()": {
+          "Lines": {
+            "56": 0,
+            "57": 0,
+            "58": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.DBServices/<GetProductByListOfId>d__12": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.DBServices/<GetProductByListOfId>d__12::MoveNext()": {
+          "Lines": {
+            "77": 0,
+            "78": 0,
+            "79": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.DBServices/<GetProductList>d__6": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.DBServices/<GetProductList>d__6::MoveNext()": {
+          "Lines": {
+            "40": 0,
+            "41": 0,
+            "42": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.DBServices/<GetProductList>d__7": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.DBServices/<GetProductList>d__7::MoveNext()": {
+          "Lines": {
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0
+          },
+          "Branches": [
+            {
+              "Line": 47,
+              "Offset": 51,
+              "EndOffset": 53,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 51,
+              "EndOffset": 89,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.DBServices/<ProductExists>d__11": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.DBServices/<ProductExists>d__11::MoveNext()": {
+          "Lines": {
+            "72": 0,
+            "73": 0,
+            "74": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.DBServices/<RegisterUser>d__3": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.DBServices/<RegisterUser>d__3::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.DBServices/<UpdateProduct>d__9": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.DBServices/<UpdateProduct>d__9::MoveNext()": {
+          "Lines": {
+            "61": 0,
+            "62": 0,
+            "63": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.DBServices/<UserExists>d__4": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.DBServices/<UserExists>d__4::MoveNext()": {
+          "Lines": {
+            "29": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\DataAccess\\OrderAndPaymentDbServices.cs": {
+      "ShoppingApp.DataAccess.DataAccess.OrderAndPaymentDbServices": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.OrderAndPaymentDbServices::.ctor(ShoppingApp.DataAccess.DataAccess.ShoppingDbContext)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.OrderAndPaymentDbServices/<AddOrderAndPaymentDetails>d__2": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.OrderAndPaymentDbServices/<AddOrderAndPaymentDetails>d__2::MoveNext()": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.OrderAndPaymentDbServices/<GetOrderAndPaymentDetails>d__3": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.OrderAndPaymentDbServices/<GetOrderAndPaymentDetails>d__3::MoveNext()": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\DataAccess\\ShoppingDbContext.cs": {
+      "ShoppingApp.DataAccess.DataAccess.ShoppingDbContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<ShoppingApp.Models.Domain.User> ShoppingApp.DataAccess.DataAccess.ShoppingDbContext::get_Users()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<ShoppingApp.Models.Domain.UserDetails> ShoppingApp.DataAccess.DataAccess.ShoppingDbContext::get_UserDetails()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<ShoppingApp.Models.Domain.Product> ShoppingApp.DataAccess.DataAccess.ShoppingDbContext::get_Products()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<ShoppingApp.Models.Domain.Cart> ShoppingApp.DataAccess.DataAccess.ShoppingDbContext::get_Cart()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<ShoppingApp.Models.Domain.OrderAndPayment> ShoppingApp.DataAccess.DataAccess.ShoppingDbContext::get_OrderAndPayments()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Void ShoppingApp.DataAccess.DataAccess.ShoppingDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<ShoppingApp.DataAccess.DataAccess.ShoppingDbContext>)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.DataAccess\\DataAccess\\UserDbServices.cs": {
+      "ShoppingApp.DataAccess.DataAccess.UserDbServices": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.UserDbServices::.ctor(ShoppingApp.DataAccess.DataAccess.ShoppingDbContext)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.UserDbServices/<AddUserDetails>d__2": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.UserDbServices/<AddUserDetails>d__2::MoveNext()": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.UserDbServices/<DeleteUserDetail>d__4": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.UserDbServices/<DeleteUserDetail>d__4::MoveNext()": {
+          "Lines": {
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.UserDbServices/<GetUserDetails>d__6": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.UserDbServices/<GetUserDetails>d__6::MoveNext()": {
+          "Lines": {
+            "41": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.UserDbServices/<UpdateUserDetails>d__5": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.UserDbServices/<UpdateUserDetails>d__5::MoveNext()": {
+          "Lines": {
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.DataAccess.DataAccess.UserDbServices/<UserItemExists>d__3": {
+        "System.Void ShoppingApp.DataAccess.DataAccess.UserDbServices/<UserItemExists>d__3::MoveNext()": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "ShoppingApp.dll": {
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp\\Controllers\\CartController.cs": {
+      "ShoppingApp.Controllers.CartController": {
+        "Microsoft.AspNetCore.Mvc.IActionResult ShoppingApp.Controllers.CartController::GetCartDetails()": {
+          "Lines": {
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1
+          },
+          "Branches": []
+        },
+        "System.Void ShoppingApp.Controllers.CartController::.ctor(ShoppingApp.Services.IServices.ICartServices,Microsoft.Extensions.Logging.ILogger`1<ShoppingApp.Controllers.CartController>)": {
+          "Lines": {
+            "21": 12,
+            "22": 12,
+            "23": 12,
+            "24": 12,
+            "25": 12
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Controllers.CartController/<>c": {
+        "System.Boolean ShoppingApp.Controllers.CartController/<>c::<GetCartDetails>b__4_0(System.Security.Claims.Claim)": {
+          "Lines": {
+            "38": 6
+          },
+          "Branches": []
+        },
+        "System.Boolean ShoppingApp.Controllers.CartController/<>c::<AddToCart>b__5_0(System.Security.Claims.Claim)": {
+          "Lines": {
+            "56": 4
+          },
+          "Branches": []
+        },
+        "System.Boolean ShoppingApp.Controllers.CartController/<>c::<UpdateCartDetails>b__6_0(System.Security.Claims.Claim)": {
+          "Lines": {
+            "70": 6
+          },
+          "Branches": []
+        },
+        "System.Boolean ShoppingApp.Controllers.CartController/<>c::<DeleteFromCart>b__7_0(System.Security.Claims.Claim)": {
+          "Lines": {
+            "88": 6
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Controllers.CartController/<AddToCart>d__5": {
+        "System.Void ShoppingApp.Controllers.CartController/<AddToCart>d__5::MoveNext()": {
+          "Lines": {
+            "54": 2,
+            "55": 2,
+            "57": 2,
+            "58": 1,
+            "59": 1,
+            "60": 1,
+            "62": 1,
+            "63": 1,
+            "64": 2
+          },
+          "Branches": [
+            {
+              "Line": 57,
+              "Offset": 132,
+              "EndOffset": 134,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 57,
+              "Offset": 132,
+              "EndOffset": 184,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Controllers.CartController/<DeleteFromCart>d__7": {
+        "System.Void ShoppingApp.Controllers.CartController/<DeleteFromCart>d__7::MoveNext()": {
+          "Lines": {
+            "86": 3,
+            "87": 3,
+            "89": 3,
+            "90": 1,
+            "91": 1,
+            "92": 1,
+            "94": 2,
+            "95": 2,
+            "96": 1,
+            "97": 1,
+            "98": 3
+          },
+          "Branches": [
+            {
+              "Line": 89,
+              "Offset": 127,
+              "EndOffset": 129,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 89,
+              "Offset": 127,
+              "EndOffset": 179,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 95,
+              "Offset": 319,
+              "EndOffset": 321,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 95,
+              "Offset": 319,
+              "EndOffset": 340,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Controllers.CartController/<GetCartDetails>d__4": {
+        "System.Void ShoppingApp.Controllers.CartController/<GetCartDetails>d__4::MoveNext()": {
+          "Lines": {
+            "36": 3,
+            "37": 3,
+            "39": 3,
+            "40": 1,
+            "41": 1,
+            "42": 1,
+            "44": 2,
+            "45": 2,
+            "46": 1,
+            "47": 1,
+            "49": 1,
+            "50": 3
+          },
+          "Branches": [
+            {
+              "Line": 39,
+              "Offset": 127,
+              "EndOffset": 129,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 39,
+              "Offset": 127,
+              "EndOffset": 179,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 45,
+              "Offset": 329,
+              "EndOffset": 331,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 45,
+              "Offset": 329,
+              "EndOffset": 352,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Controllers.CartController/<UpdateCartDetails>d__6": {
+        "System.Void ShoppingApp.Controllers.CartController/<UpdateCartDetails>d__6::MoveNext()": {
+          "Lines": {
+            "68": 3,
+            "69": 3,
+            "71": 3,
+            "72": 1,
+            "73": 1,
+            "74": 1,
+            "76": 2,
+            "77": 2,
+            "78": 1,
+            "79": 1,
+            "81": 1,
+            "82": 3
+          },
+          "Branches": [
+            {
+              "Line": 71,
+              "Offset": 132,
+              "EndOffset": 134,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 71,
+              "Offset": 132,
+              "EndOffset": 184,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 77,
+              "Offset": 324,
+              "EndOffset": 326,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 77,
+              "Offset": 324,
+              "EndOffset": 346,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp\\Controllers\\ErrorController.cs": {
+      "ShoppingApp.Controllers.ErrorController": {
+        "Microsoft.AspNetCore.Mvc.IActionResult ShoppingApp.Controllers.ErrorController::Error(System.Exception)": {
+          "Lines": {
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1
+          },
+          "Branches": []
+        },
+        "System.Void ShoppingApp.Controllers.ErrorController::.ctor(Microsoft.Extensions.Logging.ILogger`1<ShoppingApp.Controllers.ErrorController>)": {
+          "Lines": {
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp\\Controllers\\OrderAndPaymentController.cs": {
+      "ShoppingApp.Controllers.OrderAndPaymentController": {
+        "System.Void ShoppingApp.Controllers.OrderAndPaymentController::.ctor(ShoppingApp.Services.IServices.IOrderPaymentDetails,Microsoft.Extensions.Logging.ILogger`1<ShoppingApp.Controllers.OrderAndPaymentController>)": {
+          "Lines": {
+            "20": 6,
+            "21": 6,
+            "22": 6,
+            "23": 6,
+            "24": 6
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Controllers.OrderAndPaymentController/<>c": {
+        "System.Boolean ShoppingApp.Controllers.OrderAndPaymentController/<>c::<AddOrderPaymentDetails>b__3_0(System.Security.Claims.Claim)": {
+          "Lines": {
+            "30": 6
+          },
+          "Branches": []
+        },
+        "System.Boolean ShoppingApp.Controllers.OrderAndPaymentController/<>c::<GetOrderPaymentDetails>b__4_0(System.Security.Claims.Claim)": {
+          "Lines": {
+            "46": 6
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Controllers.OrderAndPaymentController/<AddOrderPaymentDetails>d__3": {
+        "System.Void ShoppingApp.Controllers.OrderAndPaymentController/<AddOrderPaymentDetails>d__3::MoveNext()": {
+          "Lines": {
+            "28": 3,
+            "29": 3,
+            "31": 3,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "36": 2,
+            "37": 2,
+            "38": 1,
+            "39": 1,
+            "40": 3
+          },
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 132,
+              "EndOffset": 134,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 31,
+              "Offset": 132,
+              "EndOffset": 184,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 37,
+              "Offset": 324,
+              "EndOffset": 326,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 37,
+              "Offset": 324,
+              "EndOffset": 345,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Controllers.OrderAndPaymentController/<GetOrderPaymentDetails>d__4": {
+        "System.Void ShoppingApp.Controllers.OrderAndPaymentController/<GetOrderPaymentDetails>d__4::MoveNext()": {
+          "Lines": {
+            "44": 3,
+            "45": 3,
+            "47": 3,
+            "48": 1,
+            "49": 1,
+            "50": 1,
+            "52": 2,
+            "53": 2,
+            "54": 1,
+            "55": 1,
+            "56": 3
+          },
+          "Branches": [
+            {
+              "Line": 47,
+              "Offset": 127,
+              "EndOffset": 129,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 47,
+              "Offset": 127,
+              "EndOffset": 179,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 53,
+              "Offset": 323,
+              "EndOffset": 325,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 53,
+              "Offset": 323,
+              "EndOffset": 329,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 53,
+              "Offset": 341,
+              "EndOffset": 343,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 53,
+              "Offset": 341,
+              "EndOffset": 363,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp\\Controllers\\ProductsController.cs": {
+      "ShoppingApp.Controllers.ProductsController": {
+        "System.Void ShoppingApp.Controllers.ProductsController::.ctor(ShoppingApp.Services.IServices.IProductServices,Microsoft.Extensions.Logging.ILogger`1<ShoppingApp.Controllers.ProductsController>)": {
+          "Lines": {
+            "22": 28,
+            "23": 28,
+            "24": 28,
+            "25": 28,
+            "26": 28
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Controllers.ProductsController/<>c": {
+        "System.Boolean ShoppingApp.Controllers.ProductsController/<>c::<AddProduct>b__6_0(System.Security.Claims.Claim)": {
+          "Lines": {
+            "68": 7
+          },
+          "Branches": []
+        },
+        "System.Boolean ShoppingApp.Controllers.ProductsController/<>c::<UpdateProduct>b__7_0(System.Security.Claims.Claim)": {
+          "Lines": {
+            "83": 11
+          },
+          "Branches": []
+        },
+        "System.Boolean ShoppingApp.Controllers.ProductsController/<>c::<DeleteProduct>b__8_0(System.Security.Claims.Claim)": {
+          "Lines": {
+            "100": 11
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Controllers.ProductsController/<AddProduct>d__6": {
+        "System.Void ShoppingApp.Controllers.ProductsController/<AddProduct>d__6::MoveNext()": {
+          "Lines": {
+            "66": 2,
+            "67": 2,
+            "69": 2,
+            "70": 1,
+            "71": 1,
+            "72": 1,
+            "74": 1,
+            "75": 1,
+            "76": 2
+          },
+          "Branches": [
+            {
+              "Line": 68,
+              "Offset": 99,
+              "EndOffset": 101,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 68,
+              "Offset": 99,
+              "EndOffset": 105,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 69,
+              "Offset": 133,
+              "EndOffset": 135,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 69,
+              "Offset": 133,
+              "EndOffset": 185,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Controllers.ProductsController/<DeleteProduct>d__8": {
+        "System.Void ShoppingApp.Controllers.ProductsController/<DeleteProduct>d__8::MoveNext()": {
+          "Lines": {
+            "98": 3,
+            "99": 3,
+            "101": 3,
+            "102": 1,
+            "103": 1,
+            "104": 1,
+            "106": 2,
+            "107": 2,
+            "108": 1,
+            "109": 1,
+            "110": 3
+          },
+          "Branches": [
+            {
+              "Line": 100,
+              "Offset": 99,
+              "EndOffset": 101,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 100,
+              "Offset": 99,
+              "EndOffset": 105,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 101,
+              "Offset": 133,
+              "EndOffset": 135,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 101,
+              "Offset": 133,
+              "EndOffset": 185,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 107,
+              "Offset": 325,
+              "EndOffset": 327,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 107,
+              "Offset": 325,
+              "EndOffset": 346,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Controllers.ProductsController/<GetProductById>d__5": {
+        "System.Void ShoppingApp.Controllers.ProductsController/<GetProductById>d__5::MoveNext()": {
+          "Lines": {
+            "52": 2,
+            "53": 2,
+            "54": 2,
+            "55": 2,
+            "56": 1,
+            "57": 1,
+            "58": 1,
+            "60": 1,
+            "61": 2
+          },
+          "Branches": [
+            {
+              "Line": 55,
+              "Offset": 191,
+              "EndOffset": 193,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 55,
+              "Offset": 191,
+              "EndOffset": 266,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Controllers.ProductsController/<GetProductList>d__3": {
+        "System.Void ShoppingApp.Controllers.ProductsController/<GetProductList>d__3::MoveNext()": {
+          "Lines": {
+            "30": 2,
+            "31": 2,
+            "32": 2,
+            "33": 2,
+            "34": 2,
+            "35": 1,
+            "36": 1,
+            "37": 2
+          },
+          "Branches": [
+            {
+              "Line": 33,
+              "Offset": 195,
+              "EndOffset": 197,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 33,
+              "Offset": 195,
+              "EndOffset": 210,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 34,
+              "Offset": 258,
+              "EndOffset": 260,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 34,
+              "Offset": 258,
+              "EndOffset": 264,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 34,
+              "Offset": 276,
+              "EndOffset": 278,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 34,
+              "Offset": 276,
+              "EndOffset": 298,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Controllers.ProductsController/<GetProductList>d__4": {
+        "System.Void ShoppingApp.Controllers.ProductsController/<GetProductList>d__4::MoveNext()": {
+          "Lines": {
+            "41": 2,
+            "42": 2,
+            "43": 2,
+            "44": 2,
+            "45": 2,
+            "46": 1,
+            "47": 1,
+            "48": 2
+          },
+          "Branches": [
+            {
+              "Line": 44,
+              "Offset": 201,
+              "EndOffset": 203,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 44,
+              "Offset": 201,
+              "EndOffset": 216,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 45,
+              "Offset": 264,
+              "EndOffset": 266,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 45,
+              "Offset": 264,
+              "EndOffset": 270,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 45,
+              "Offset": 282,
+              "EndOffset": 284,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 45,
+              "Offset": 282,
+              "EndOffset": 304,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Controllers.ProductsController/<UpdateProduct>d__7": {
+        "System.Void ShoppingApp.Controllers.ProductsController/<UpdateProduct>d__7::MoveNext()": {
+          "Lines": {
+            "81": 3,
+            "82": 3,
+            "84": 3,
+            "85": 1,
+            "86": 1,
+            "87": 1,
+            "89": 2,
+            "90": 2,
+            "91": 1,
+            "92": 1,
+            "93": 3
+          },
+          "Branches": [
+            {
+              "Line": 83,
+              "Offset": 99,
+              "EndOffset": 101,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 83,
+              "Offset": 99,
+              "EndOffset": 105,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 84,
+              "Offset": 133,
+              "EndOffset": 135,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 84,
+              "Offset": 133,
+              "EndOffset": 185,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 90,
+              "Offset": 325,
+              "EndOffset": 327,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 90,
+              "Offset": 325,
+              "EndOffset": 346,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp\\Controllers\\UserController.cs": {
+      "ShoppingApp.Controllers.UserController": {
+        "System.Void ShoppingApp.Controllers.UserController::.ctor(ShoppingApp.Services.IServices.IUserServices,Microsoft.Extensions.Logging.ILogger`1<ShoppingApp.Controllers.UserController>)": {
+          "Lines": {
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Controllers.UserController/<Login>d__4": {
+        "System.Void ShoppingApp.Controllers.UserController/<Login>d__4::MoveNext()": {
+          "Lines": {
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Controllers.UserController/<SignUp>d__3": {
+        "System.Void ShoppingApp.Controllers.UserController/<SignUp>d__3::MoveNext()": {
+          "Lines": {
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp\\Controllers\\UserDetailsController.cs": {
+      "ShoppingApp.Controllers.UserDetailsController": {
+        "System.Void ShoppingApp.Controllers.UserDetailsController::.ctor(ShoppingApp.Services.IServices.IUserDetailServices,Microsoft.Extensions.Logging.ILogger`1<ShoppingApp.Controllers.UserDetailsController>)": {
+          "Lines": {
+            "22": 11,
+            "23": 11,
+            "24": 11,
+            "25": 11,
+            "26": 11
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Controllers.UserDetailsController/<>c": {
+        "System.Boolean ShoppingApp.Controllers.UserDetailsController/<>c::<GetUserDetails>b__3_0(System.Security.Claims.Claim)": {
+          "Lines": {
+            "32": 6
+          },
+          "Branches": []
+        },
+        "System.Boolean ShoppingApp.Controllers.UserDetailsController/<>c::<AddUserDetails>b__4_0(System.Security.Claims.Claim)": {
+          "Lines": {
+            "53": 4
+          },
+          "Branches": []
+        },
+        "System.Boolean ShoppingApp.Controllers.UserDetailsController/<>c::<UpdateUserDetails>b__5_0(System.Security.Claims.Claim)": {
+          "Lines": {
+            "70": 6
+          },
+          "Branches": []
+        },
+        "System.Boolean ShoppingApp.Controllers.UserDetailsController/<>c::<DeleteUserDetails>b__6_0(System.Security.Claims.Claim)": {
+          "Lines": {
+            "89": 6
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Controllers.UserDetailsController/<AddUserDetails>d__4": {
+        "System.Void ShoppingApp.Controllers.UserDetailsController/<AddUserDetails>d__4::MoveNext()": {
+          "Lines": {
+            "51": 2,
+            "52": 2,
+            "54": 2,
+            "55": 1,
+            "56": 1,
+            "57": 1,
+            "60": 1,
+            "61": 1,
+            "62": 1,
+            "63": 2
+          },
+          "Branches": [
+            {
+              "Line": 54,
+              "Offset": 132,
+              "EndOffset": 134,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 54,
+              "Offset": 132,
+              "EndOffset": 184,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Controllers.UserDetailsController/<DeleteUserDetails>d__6": {
+        "System.Void ShoppingApp.Controllers.UserDetailsController/<DeleteUserDetails>d__6::MoveNext()": {
+          "Lines": {
+            "87": 3,
+            "88": 3,
+            "90": 3,
+            "91": 1,
+            "92": 1,
+            "93": 1,
+            "96": 2,
+            "97": 2,
+            "98": 1,
+            "99": 1,
+            "101": 1,
+            "102": 3
+          },
+          "Branches": [
+            {
+              "Line": 90,
+              "Offset": 127,
+              "EndOffset": 129,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 90,
+              "Offset": 127,
+              "EndOffset": 179,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 97,
+              "Offset": 325,
+              "EndOffset": 327,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 97,
+              "Offset": 325,
+              "EndOffset": 347,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Controllers.UserDetailsController/<GetUserDetails>d__3": {
+        "System.Void ShoppingApp.Controllers.UserDetailsController/<GetUserDetails>d__3::MoveNext()": {
+          "Lines": {
+            "30": 3,
+            "31": 3,
+            "33": 3,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "39": 2,
+            "40": 2,
+            "41": 2,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "46": 1,
+            "47": 3
+          },
+          "Branches": [
+            {
+              "Line": 33,
+              "Offset": 127,
+              "EndOffset": 129,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 33,
+              "Offset": 127,
+              "EndOffset": 179,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 40,
+              "Offset": 339,
+              "EndOffset": 341,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 40,
+              "Offset": 339,
+              "EndOffset": 354,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 41,
+              "Offset": 402,
+              "EndOffset": 404,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 41,
+              "Offset": 402,
+              "EndOffset": 408,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            },
+            {
+              "Line": 41,
+              "Offset": 420,
+              "EndOffset": 422,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 1
+            },
+            {
+              "Line": 41,
+              "Offset": 420,
+              "EndOffset": 470,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Controllers.UserDetailsController/<UpdateUserDetails>d__5": {
+        "System.Void ShoppingApp.Controllers.UserDetailsController/<UpdateUserDetails>d__5::MoveNext()": {
+          "Lines": {
+            "68": 3,
+            "69": 3,
+            "71": 3,
+            "72": 1,
+            "73": 1,
+            "74": 1,
+            "77": 2,
+            "78": 2,
+            "79": 1,
+            "80": 1,
+            "82": 1,
+            "83": 3
+          },
+          "Branches": [
+            {
+              "Line": 71,
+              "Offset": 132,
+              "EndOffset": 134,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 71,
+              "Offset": 132,
+              "EndOffset": 184,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 78,
+              "Offset": 324,
+              "EndOffset": 326,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 78,
+              "Offset": 324,
+              "EndOffset": 346,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ShoppingApp.Models.dll": {
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Model\\ApiResponse.cs": {
+      "ShoppingApp.Models.Model.ApiResponse": {
+        "System.Boolean ShoppingApp.Models.Model.ApiResponse::get_IsSuccess()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.ApiResponse::get_Message()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.ApiResponse::get_Token()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Model\\AuthResponse.cs": {
+      "ShoppingApp.Models.Model.AuthResponse": {
+        "System.String ShoppingApp.Models.Model.AuthResponse::get__Id()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.AuthResponse::get_Email_verified()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.AuthResponse::get_Email()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.AuthResponse::get_Access_token()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Model\\CartResponse.cs": {
+      "ShoppingApp.Models.Model.CartResponse": {
+        "System.Collections.Generic.List`1<ShoppingApp.Models.Model.ProductQuantity> ShoppingApp.Models.Model.CartResponse::get_ProductQuantity()": {
+          "Lines": {
+            "10": 5
+          },
+          "Branches": []
+        },
+        "System.Decimal ShoppingApp.Models.Model.CartResponse::get_TotalPrice()": {
+          "Lines": {
+            "12": 3
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<ShoppingApp.Models.Domain.UserDetails> ShoppingApp.Models.Model.CartResponse::get_UserDetails()": {
+          "Lines": {
+            "14": 3
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.CartResponse::get_Message()": {
+          "Lines": {
+            "16": 3
+          },
+          "Branches": []
+        },
+        "System.Void ShoppingApp.Models.Model.CartResponse::.ctor(System.Collections.Generic.List`1<ShoppingApp.Models.Model.ProductQuantity>,System.Collections.Generic.List`1<ShoppingApp.Models.Domain.UserDetails>,System.String)": {
+          "Lines": {
+            "18": 3,
+            "19": 3,
+            "20": 3,
+            "21": 3,
+            "22": 3,
+            "23": 6,
+            "24": 3
+          },
+          "Branches": [
+            {
+              "Line": 23,
+              "Offset": 34,
+              "EndOffset": 36,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 23,
+              "Offset": 34,
+              "EndOffset": 45,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 23,
+              "Offset": 43,
+              "EndOffset": 45,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 23,
+              "Offset": 43,
+              "EndOffset": 52,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Model\\LoginDetails.cs": {
+      "ShoppingApp.Models.Model.LoginDetails": {
+        "System.String ShoppingApp.Models.Model.LoginDetails::get_audience()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.LoginDetails::get_LoginURL()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.LoginDetails::get_grant_type()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.LoginDetails::get_client_id()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.LoginDetails::get_client_secret()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.LoginDetails::get_username()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.LoginDetails::get_password()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Model\\OrderAndPaymentRequest.cs": {
+      "ShoppingApp.Models.Model.OrderAndPaymentRequest": {
+        "System.String ShoppingApp.Models.Model.OrderAndPaymentRequest::get_TokenUserId()": {
+          "Lines": {
+            "8": 14
+          },
+          "Branches": []
+        },
+        "System.Int32 ShoppingApp.Models.Model.OrderAndPaymentRequest::get_UserDetailsId()": {
+          "Lines": {
+            "11": 6
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.OrderAndPaymentRequest::get_PaymentType()": {
+          "Lines": {
+            "14": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Model\\OrderAndPaymentResponse.cs": {
+      "ShoppingApp.Models.Model.OrderAndPaymentResponse": {
+        "System.Int32 ShoppingApp.Models.Model.OrderAndPaymentResponse::get_OrderId()": {
+          "Lines": {
+            "9": 4
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.OrderAndPaymentResponse::get_TokenUserId()": {
+          "Lines": {
+            "11": 4
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<ShoppingApp.Models.Domain.Product> ShoppingApp.Models.Model.OrderAndPaymentResponse::get_Products()": {
+          "Lines": {
+            "13": 4
+          },
+          "Branches": []
+        },
+        "ShoppingApp.Models.Domain.UserDetails ShoppingApp.Models.Model.OrderAndPaymentResponse::get_UserDetail()": {
+          "Lines": {
+            "15": 4
+          },
+          "Branches": []
+        },
+        "System.Int32 ShoppingApp.Models.Model.OrderAndPaymentResponse::get_TotalQuantity()": {
+          "Lines": {
+            "17": 4
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.OrderAndPaymentResponse::get_PaymentType()": {
+          "Lines": {
+            "19": 4
+          },
+          "Branches": []
+        },
+        "System.DateTime ShoppingApp.Models.Model.OrderAndPaymentResponse::get_OrderDate()": {
+          "Lines": {
+            "21": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Model\\ProductQuantity.cs": {
+      "ShoppingApp.Models.Model.ProductQuantity": {
+        "System.Int32 ShoppingApp.Models.Model.ProductQuantity::get_CartId()": {
+          "Lines": {
+            "7": 3
+          },
+          "Branches": []
+        },
+        "ShoppingApp.Models.Domain.Product ShoppingApp.Models.Model.ProductQuantity::get_Product()": {
+          "Lines": {
+            "9": 6
+          },
+          "Branches": []
+        },
+        "System.Int32 ShoppingApp.Models.Model.ProductQuantity::get_Quantity()": {
+          "Lines": {
+            "11": 6
+          },
+          "Branches": []
+        },
+        "System.Boolean ShoppingApp.Models.Model.ProductQuantity::get_ProductExpired()": {
+          "Lines": {
+            "13": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Model\\SignUpDetails.cs": {
+      "ShoppingApp.Models.Model.SignUpDetails": {
+        "System.String ShoppingApp.Models.Model.SignUpDetails::get_SignupURL()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.SignUpDetails::get_client_id()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.SignUpDetails::get_connection()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.SignUpDetails::get_email()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.SignUpDetails::get_password()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Model\\SortAndFilter.cs": {
+      "ShoppingApp.Models.Model.SortAndFilter": {
+        "System.String ShoppingApp.Models.Model.SortAndFilter::get_SortBy()": {
+          "Lines": {
+            "5": 18
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.SortAndFilter::get_SortOrder()": {
+          "Lines": {
+            "7": 13
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.SortAndFilter::get_FilterBy()": {
+          "Lines": {
+            "9": 18
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.SortAndFilter::get_FilterValue()": {
+          "Lines": {
+            "11": 9
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Model\\UserModel.cs": {
+      "ShoppingApp.Models.Model.UserModel": {
+        "System.String ShoppingApp.Models.Model.UserModel::get_UserName()": {
+          "Lines": {
+            "5": 2
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.UserModel::get_Password()": {
+          "Lines": {
+            "7": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Model\\ValidationResponse.cs": {
+      "ShoppingApp.Models.Model.ValidationResponse": {
+        "System.Int32 ShoppingApp.Models.Model.ValidationResponse::get_StatusCode()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Model.ValidationResponse::get_Message()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Void ShoppingApp.Models.Model.ValidationResponse::.ctor(System.Int32,System.String)": {
+          "Lines": {
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Domain\\Cart.cs": {
+      "ShoppingApp.Models.Domain.Cart": {
+        "System.Int32 ShoppingApp.Models.Domain.Cart::get_CartId()": {
+          "Lines": {
+            "8": 49
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Domain.Cart::get_TokenUserId()": {
+          "Lines": {
+            "11": 37
+          },
+          "Branches": []
+        },
+        "System.Int32 ShoppingApp.Models.Domain.Cart::get_ProductId()": {
+          "Lines": {
+            "14": 33
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Domain.Cart::get_Quantity()": {
+          "Lines": {
+            "17": 37
+          },
+          "Branches": []
+        },
+        "ShoppingApp.Models.Domain.Product ShoppingApp.Models.Domain.Cart::get_Product()": {
+          "Lines": {
+            "20": 34
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Domain\\OrderAndPayment.cs": {
+      "ShoppingApp.Models.Domain.OrderAndPayment": {
+        "System.Int32 ShoppingApp.Models.Domain.OrderAndPayment::get_OrderId()": {
+          "Lines": {
+            "10": 6
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Domain.OrderAndPayment::get_TokenUserId()": {
+          "Lines": {
+            "13": 7
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Domain.OrderAndPayment::get_ProductId()": {
+          "Lines": {
+            "16": 15
+          },
+          "Branches": []
+        },
+        "System.Int32 ShoppingApp.Models.Domain.OrderAndPayment::get_UserDetailsId()": {
+          "Lines": {
+            "19": 5
+          },
+          "Branches": []
+        },
+        "System.Int32 ShoppingApp.Models.Domain.OrderAndPayment::get_Quantity()": {
+          "Lines": {
+            "22": 7
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Domain.OrderAndPayment::get_PaymentType()": {
+          "Lines": {
+            "25": 7
+          },
+          "Branches": []
+        },
+        "System.DateTime ShoppingApp.Models.Domain.OrderAndPayment::get_OrderDate()": {
+          "Lines": {
+            "28": 7
+          },
+          "Branches": []
+        },
+        "ShoppingApp.Models.Domain.UserDetails ShoppingApp.Models.Domain.OrderAndPayment::get_UserDetail()": {
+          "Lines": {
+            "31": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Domain\\Product.cs": {
+      "ShoppingApp.Models.Domain.Product": {
+        "System.Int32 ShoppingApp.Models.Domain.Product::get_ProductId()": {
+          "Lines": {
+            "11": 157
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Domain.Product::get_Name()": {
+          "Lines": {
+            "15": 98
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Domain.Product::get_Description()": {
+          "Lines": {
+            "18": 98
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Domain.Product::get_Category()": {
+          "Lines": {
+            "21": 98
+          },
+          "Branches": []
+        },
+        "System.Decimal ShoppingApp.Models.Domain.Product::get_Price()": {
+          "Lines": {
+            "25": 101
+          },
+          "Branches": []
+        },
+        "System.DateTime ShoppingApp.Models.Domain.Product::get_DateAdded()": {
+          "Lines": {
+            "28": 98
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> ShoppingApp.Models.Domain.Product::get_ExpiryDate()": {
+          "Lines": {
+            "30": 102
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<ShoppingApp.Models.Domain.Cart> ShoppingApp.Models.Domain.Product::get_Cart()": {
+          "Lines": {
+            "33": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Domain\\User.cs": {
+      "ShoppingApp.Models.Domain.User": {
+        "System.String ShoppingApp.Models.Domain.User::get_TokenUserId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Domain.User::get_UserName()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<ShoppingApp.Models.Domain.Cart> ShoppingApp.Models.Domain.User::get_Cart()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<ShoppingApp.Models.Domain.UserDetails> ShoppingApp.Models.Domain.User::get_UserDetails()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\shoppingApp.Models\\Domain\\UserDetails.cs": {
+      "ShoppingApp.Models.Domain.UserDetails": {
+        "System.Int32 ShoppingApp.Models.Domain.UserDetails::get_Id()": {
+          "Lines": {
+            "8": 52
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Domain.UserDetails::get_TokenUserId()": {
+          "Lines": {
+            "11": 59
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Domain.UserDetails::get_Address()": {
+          "Lines": {
+            "14": 42
+          },
+          "Branches": []
+        },
+        "System.String ShoppingApp.Models.Domain.UserDetails::get_PhoneNumber()": {
+          "Lines": {
+            "17": 42
+          },
+          "Branches": []
+        },
+        "ShoppingApp.Models.Domain.User ShoppingApp.Models.Domain.UserDetails::get_User()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "ShoppingApp.Services.dll": {
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.Services\\Validation\\ExceptionAttribute.cs": {
+      "ShoppingApp.Services.Validation.ExceptionAttribute": {
+        "System.Void ShoppingApp.Services.Validation.ExceptionAttribute::OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": [
+            {
+              "Line": 18,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 18,
+              "Offset": 7,
+              "EndOffset": 83,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ShoppingApp.Services.Validation.ExceptionAttribute::.ctor(Microsoft.Extensions.Logging.ILogger`1<ShoppingApp.Services.Validation.ExceptionAttribute>)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.Services\\Validation\\UserValidationAttribute.cs": {
+      "ShoppingApp.Services.Validation.UserValidationAttribute": {
+        "System.Void ShoppingApp.Services.Validation.UserValidationAttribute::OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 2,
+              "EndOffset": 7,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 18,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 21,
+              "Offset": 232,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 78,
+              "EndOffset": 80,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 78,
+              "EndOffset": 132,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 147,
+              "EndOffset": 149,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 33,
+              "Offset": 186,
+              "EndOffset": 188,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 33,
+              "Offset": 186,
+              "EndOffset": 192,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 147,
+              "EndOffset": 225,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 21,
+              "Offset": 232,
+              "EndOffset": 237,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 18,
+              "EndOffset": 251,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ShoppingApp.Services.Validation.UserValidationAttribute::.ctor(Microsoft.Extensions.Logging.ILogger`1<ShoppingApp.Services.Validation.UserValidationAttribute>)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.Services\\Services\\CartServices.cs": {
+      "ShoppingApp.Services.Services.CartServices": {
+        "System.Void ShoppingApp.Services.Services.CartServices::.ctor(ShoppingApp.DataAccess.IDataAccess.ICartDbService,ShoppingApp.DataAccess.IDataAccess.IUserDbServices,Microsoft.Extensions.Logging.ILogger`1<ShoppingApp.Services.Services.CartServices>)": {
+          "Lines": {
+            "19": 9,
+            "20": 9,
+            "21": 9,
+            "22": 9,
+            "23": 9,
+            "24": 9
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Services.Services.CartServices/<>c": {
+        "ShoppingApp.Models.Model.ProductQuantity ShoppingApp.Services.Services.CartServices/<>c::<GetCartDetails>b__4_0(ShoppingApp.Models.Domain.Cart)": {
+          "Lines": {
+            "30": 4,
+            "31": 4,
+            "32": 4,
+            "33": 4,
+            "34": 4,
+            "35": 4,
+            "36": 4
+          },
+          "Branches": [
+            {
+              "Line": 30,
+              "Offset": 80,
+              "EndOffset": 82,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 30,
+              "Offset": 107,
+              "EndOffset": 109,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 107,
+              "EndOffset": 112,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 30,
+              "Offset": 80,
+              "EndOffset": 127,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Services.Services.CartServices/<AddToCart>d__5": {
+        "System.Void ShoppingApp.Services.Services.CartServices/<AddToCart>d__5::MoveNext()": {
+          "Lines": {
+            "48": 2,
+            "49": 2,
+            "50": 2,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "55": 1,
+            "57": 1,
+            "58": 1,
+            "59": 1,
+            "60": 1,
+            "61": 2
+          },
+          "Branches": [
+            {
+              "Line": 50,
+              "Offset": 203,
+              "EndOffset": 208,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 50,
+              "Offset": 203,
+              "EndOffset": 396,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Services.Services.CartServices/<Delete>d__6": {
+        "System.Void ShoppingApp.Services.Services.CartServices/<Delete>d__6::MoveNext()": {
+          "Lines": {
+            "64": 2,
+            "65": 2,
+            "66": 2,
+            "67": 1,
+            "68": 1,
+            "69": 1,
+            "70": 1,
+            "72": 1,
+            "73": 1,
+            "74": 2
+          },
+          "Branches": [
+            {
+              "Line": 66,
+              "Offset": 175,
+              "EndOffset": 180,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 66,
+              "Offset": 175,
+              "EndOffset": 327,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Services.Services.CartServices/<Edit>d__7": {
+        "System.Void ShoppingApp.Services.Services.CartServices/<Edit>d__7::MoveNext()": {
+          "Lines": {
+            "77": 3,
+            "78": 3,
+            "79": 3,
+            "80": 2,
+            "81": 2,
+            "82": 1,
+            "83": 1,
+            "84": 1,
+            "85": 1,
+            "87": 1,
+            "88": 1,
+            "89": 1,
+            "90": 2,
+            "91": 2,
+            "93": 1,
+            "94": 1,
+            "95": 3
+          },
+          "Branches": [
+            {
+              "Line": 79,
+              "Offset": 194,
+              "EndOffset": 199,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 81,
+              "Offset": 225,
+              "EndOffset": 230,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 81,
+              "Offset": 225,
+              "EndOffset": 372,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 79,
+              "Offset": 194,
+              "EndOffset": 520,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Services.Services.CartServices/<GetCartDetails>d__4": {
+        "System.Void ShoppingApp.Services.Services.CartServices/<GetCartDetails>d__4::MoveNext()": {
+          "Lines": {
+            "27": 2,
+            "28": 2,
+            "29": 2,
+            "37": 2,
+            "38": 2,
+            "39": 1,
+            "40": 2,
+            "41": 1,
+            "42": 2,
+            "43": 2,
+            "44": 2,
+            "45": 2
+          },
+          "Branches": [
+            {
+              "Line": 38,
+              "Offset": 378,
+              "EndOffset": 380,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 38,
+              "Offset": 378,
+              "EndOffset": 396,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 38,
+              "Offset": 401,
+              "EndOffset": 403,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 38,
+              "Offset": 401,
+              "EndOffset": 425,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 2
+            },
+            {
+              "Line": 40,
+              "Offset": 431,
+              "EndOffset": 433,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 1
+            },
+            {
+              "Line": 40,
+              "Offset": 431,
+              "EndOffset": 449,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 1
+            },
+            {
+              "Line": 40,
+              "Offset": 454,
+              "EndOffset": 456,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 1
+            },
+            {
+              "Line": 40,
+              "Offset": 454,
+              "EndOffset": 478,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 2
+            },
+            {
+              "Line": 43,
+              "Offset": 536,
+              "EndOffset": 538,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 1
+            },
+            {
+              "Line": 43,
+              "Offset": 536,
+              "EndOffset": 551,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.Services\\Services\\OrderPaymentDetails.cs": {
+      "ShoppingApp.Services.Services.OrderPaymentDetails": {
+        "System.Void ShoppingApp.Services.Services.OrderPaymentDetails::.ctor(ShoppingApp.DataAccess.IDataAccess.IOrderAndPaymentDBServices,ShoppingApp.DataAccess.IDataAccess.ICartDbService,ShoppingApp.DataAccess.IDataAccess.IDBServices,Microsoft.Extensions.Logging.ILogger`1<ShoppingApp.Services.Services.OrderPaymentDetails>)": {
+          "Lines": {
+            "21": 4,
+            "22": 4,
+            "23": 4,
+            "24": 4,
+            "25": 4,
+            "26": 4,
+            "27": 4,
+            "28": 4
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Services.Services.OrderPaymentDetails/<>c": {
+        "System.String ShoppingApp.Services.Services.OrderPaymentDetails/<>c::<GetOrderPaymentDetails>b__7_0(ShoppingApp.Models.Domain.OrderAndPayment)": {
+          "Lines": {
+            "51": 3
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Services.Services.OrderPaymentDetails/<AddOrderPaymentDetails>d__6": {
+        "System.Void ShoppingApp.Services.Services.OrderPaymentDetails/<AddOrderPaymentDetails>d__6::MoveNext()": {
+          "Lines": {
+            "31": 2,
+            "32": 2,
+            "33": 2,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1,
+            "41": 1,
+            "42": 1,
+            "43": 2
+          },
+          "Branches": [
+            {
+              "Line": 33,
+              "Offset": 188,
+              "EndOffset": 190,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 33,
+              "Offset": 188,
+              "EndOffset": 194,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 33,
+              "Offset": 206,
+              "EndOffset": 211,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 33,
+              "Offset": 206,
+              "EndOffset": 523,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Services.Services.OrderPaymentDetails/<GetOrderPaymentDetails>d__7": {
+        "System.Void ShoppingApp.Services.Services.OrderPaymentDetails/<GetOrderPaymentDetails>d__7::MoveNext()": {
+          "Lines": {
+            "46": 2,
+            "47": 2,
+            "48": 2,
+            "49": 1,
+            "50": 1,
+            "52": 7,
+            "53": 2,
+            "54": 2,
+            "55": 2,
+            "56": 2,
+            "57": 1,
+            "59": 1,
+            "60": 1,
+            "61": 1,
+            "63": 1,
+            "64": 1,
+            "65": 2
+          },
+          "Branches": [
+            {
+              "Line": 48,
+              "Offset": 169,
+              "EndOffset": 171,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 48,
+              "Offset": 169,
+              "EndOffset": 175,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 48,
+              "Offset": 187,
+              "EndOffset": 192,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 52,
+              "Offset": 378,
+              "EndOffset": 277,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 2
+            },
+            {
+              "Line": 52,
+              "Offset": 378,
+              "EndOffset": 380,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 48,
+              "Offset": 187,
+              "EndOffset": 653,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.Services\\Services\\ProductServices.cs": {
+      "ShoppingApp.Services.Services.ProductServices": {
+        "System.Void ShoppingApp.Services.Services.ProductServices::.ctor(ShoppingApp.DataAccess.IDataAccess.IDBServices,Microsoft.Extensions.Logging.ILogger`1<ShoppingApp.Services.Services.ProductServices>)": {
+          "Lines": {
+            "16": 8,
+            "17": 8,
+            "18": 8,
+            "19": 8,
+            "20": 8
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Services.Services.ProductServices/<AddProduct>d__5": {
+        "System.Void ShoppingApp.Services.Services.ProductServices/<AddProduct>d__5::MoveNext()": {
+          "Lines": {
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Services.Services.ProductServices/<DeleteProduct>d__8": {
+        "System.Void ShoppingApp.Services.Services.ProductServices/<DeleteProduct>d__8::MoveNext()": {
+          "Lines": {
+            "64": 2,
+            "65": 2,
+            "66": 2,
+            "67": 1,
+            "68": 1,
+            "69": 1,
+            "70": 1,
+            "72": 1,
+            "73": 1,
+            "74": 2
+          },
+          "Branches": [
+            {
+              "Line": 66,
+              "Offset": 175,
+              "EndOffset": 180,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 66,
+              "Offset": 175,
+              "EndOffset": 327,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Services.Services.ProductServices/<GetProductById>d__6": {
+        "System.Void ShoppingApp.Services.Services.ProductServices/<GetProductById>d__6::MoveNext()": {
+          "Lines": {
+            "40": 1,
+            "41": 1,
+            "42": 1
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Services.Services.ProductServices/<GetProductList>d__3": {
+        "System.Void ShoppingApp.Services.Services.ProductServices/<GetProductList>d__3::MoveNext()": {
+          "Lines": {
+            "23": 1,
+            "24": 1,
+            "25": 1
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Services.Services.ProductServices/<GetProductList>d__4": {
+        "System.Void ShoppingApp.Services.Services.ProductServices/<GetProductList>d__4::MoveNext()": {
+          "Lines": {
+            "28": 1,
+            "29": 1,
+            "30": 1
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Services.Services.ProductServices/<UpdateProduct>d__7": {
+        "System.Void ShoppingApp.Services.Services.ProductServices/<UpdateProduct>d__7::MoveNext()": {
+          "Lines": {
+            "45": 2,
+            "46": 2,
+            "47": 2,
+            "48": 1,
+            "49": 1,
+            "50": 1,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "55": 1,
+            "56": 1,
+            "57": 1,
+            "59": 1,
+            "60": 1,
+            "61": 2
+          },
+          "Branches": [
+            {
+              "Line": 47,
+              "Offset": 180,
+              "EndOffset": 185,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 47,
+              "Offset": 180,
+              "EndOffset": 470,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.Services\\Services\\UserDetailServices.cs": {
+      "ShoppingApp.Services.Services.UserDetailServices": {
+        "System.Void ShoppingApp.Services.Services.UserDetailServices::.ctor(ShoppingApp.DataAccess.IDataAccess.IUserDbServices,Microsoft.Extensions.Logging.ILogger`1<ShoppingApp.Services.Services.UserDetailServices>)": {
+          "Lines": {
+            "15": 6,
+            "16": 6,
+            "17": 6,
+            "18": 6,
+            "19": 6
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Services.Services.UserDetailServices/<AddUserDetail>d__4": {
+        "System.Void ShoppingApp.Services.Services.UserDetailServices/<AddUserDetail>d__4::MoveNext()": {
+          "Lines": {
+            "27": 1,
+            "28": 1,
+            "29": 1
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Services.Services.UserDetailServices/<DeleteUserDetail>d__6": {
+        "System.Void ShoppingApp.Services.Services.UserDetailServices/<DeleteUserDetail>d__6::MoveNext()": {
+          "Lines": {
+            "47": 2,
+            "48": 2,
+            "49": 2,
+            "50": 1,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "55": 1,
+            "56": 1,
+            "57": 2
+          },
+          "Branches": [
+            {
+              "Line": 49,
+              "Offset": 181,
+              "EndOffset": 186,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 49,
+              "Offset": 181,
+              "EndOffset": 333,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Services.Services.UserDetailServices/<EditUserDetail>d__5": {
+        "System.Void ShoppingApp.Services.Services.UserDetailServices/<EditUserDetail>d__5::MoveNext()": {
+          "Lines": {
+            "32": 2,
+            "33": 2,
+            "34": 2,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1,
+            "40": 1,
+            "42": 1,
+            "43": 1,
+            "44": 2
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 191,
+              "EndOffset": 196,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 34,
+              "Offset": 191,
+              "EndOffset": 389,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Services.Services.UserDetailServices/<GetUserDetails>d__3": {
+        "System.Void ShoppingApp.Services.Services.UserDetailServices/<GetUserDetails>d__3::MoveNext()": {
+          "Lines": {
+            "22": 1,
+            "23": 1,
+            "24": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\ashgupta110\\Desktop\\AssesmentProject\\ShoppingApp\\ShoppingApp.Services\\Services\\UserServices.cs": {
+      "ShoppingApp.Services.Services.UserServices": {
+        "ShoppingApp.Models.Domain.User ShoppingApp.Services.Services.UserServices::MapUser(System.String,System.String)": {
+          "Lines": {
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0
+          },
+          "Branches": []
+        },
+        "System.Void ShoppingApp.Services.Services.UserServices::.ctor(Microsoft.Extensions.Options.IOptions`1<ShoppingApp.Models.Model.SignUpDetails>,Microsoft.Extensions.Options.IOptions`1<ShoppingApp.Models.Model.LoginDetails>,ShoppingApp.DataAccess.IDataAccess.IDBServices,Microsoft.Extensions.Logging.ILogger`1<ShoppingApp.Services.Services.UserServices>)": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        }
+      },
+      "ShoppingApp.Services.Services.UserServices/<UserLogin>d__6": {
+        "System.Void ShoppingApp.Services.Services.UserServices/<UserLogin>d__6::MoveNext()": {
+          "Lines": {
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0
+          },
+          "Branches": [
+            {
+              "Line": 80,
+              "Offset": 215,
+              "EndOffset": 217,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 80,
+              "Offset": 215,
+              "EndOffset": 290,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 93,
+              "Offset": 582,
+              "EndOffset": 587,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 93,
+              "Offset": 582,
+              "EndOffset": 850,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ShoppingApp.Services.Services.UserServices/<UserSignUp>d__5": {
+        "System.Void ShoppingApp.Services.Services.UserServices/<UserSignUp>d__5::MoveNext()": {
+          "Lines": {
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0
+          },
+          "Branches": [
+            {
+              "Line": 40,
+              "Offset": 221,
+              "EndOffset": 223,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 221,
+              "EndOffset": 296,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 53,
+              "Offset": 588,
+              "EndOffset": 593,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 53,
+              "Offset": 588,
+              "EndOffset": 976,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -7,13 +7,13 @@
     {
         public int CartId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "UserId is required.")]
         public string TokenUserId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "productId is required")]
         public int ProductId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Quantity is required")]
         public string Quantity{ get; set; }
 
         [JsonIgnore]

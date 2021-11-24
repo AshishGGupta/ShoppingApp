@@ -9,22 +9,22 @@
         [Key]
         public int OrderId { get; set; }
         
-        [Required]
+        [Required(ErrorMessage = "UserId is required")]
         public string TokenUserId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "ProductId is required")]
         public string ProductId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "UserDetail Id is required")]
         public int UserDetailsId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Quantity is required")]
         public int Quantity { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "PaymentType is required")]
         public string PaymentType { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Order date is required")]
         public DateTime OrderDate { get; set; }
 
         [JsonIgnore]

@@ -23,6 +23,14 @@
             _logger = logger;
         }
 
+        /// <summary>
+        /// Order the products in the cart
+        /// </summary>
+        /// <param name="orderPaymentRequest">order and payment related information</param>
+        /// <returns>status code and message of response</returns>
+        /// <response code="200">Order placed successfully</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">Cart Details not found</response>
         [HttpPost("OrderAndPayment/AddOrderPaymentDetails")]
         public async Task<IActionResult> AddOrderPaymentDetails([FromBody] OrderAndPaymentRequest orderPaymentRequest)
         {
@@ -39,6 +47,14 @@
             return NotFound("Cart Details not found");
         }
 
+        /// <summary>
+        /// Get the order history
+        /// </summary>
+        /// <param name="userId">Logged in user's userId</param>
+        /// <returns>returns the list of orders placed</returns>
+        /// <response code="200">Order placed successfully</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">Cart Details not found</response>
         [HttpGet("OrderAndPayment/GetOrderPaymentDetails/{userId}")]
         public async Task<IActionResult> GetOrderPaymentDetails(string userId)
         {

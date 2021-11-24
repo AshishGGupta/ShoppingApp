@@ -25,6 +25,13 @@
             _logger = logger;
         }
 
+        /// <summary>
+        /// Get list of all products
+        /// </summary>
+        /// <returns>List of all the productss</returns>
+        /// <response code="200">Returned product detials</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">Product Details not found</response>
         [HttpGet("product/GetProductList")]
         public async Task<IActionResult> GetProductList()
         {
@@ -36,6 +43,14 @@
             return NotFound("No Products Found");
         }
 
+        /// <summary>
+        /// Get the product list based on sortby and filter details
+        /// </summary>
+        /// <param name="sortFilter">sort and filter conditions</param>
+        /// <returns>List of products according to sort and filter request</returns>
+        /// <response code="200">Returned product detials</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">Product Details not found</response>
         [HttpPost("product/GetProductList")]
         public async Task<IActionResult> GetProductList([FromBody] SortAndFilter sortFilter)
         {
@@ -47,6 +62,14 @@
             return NotFound("No Products Found");
         }
 
+        /// <summary>
+        /// Get product by the productId
+        /// </summary>
+        /// <param name="id">Product Id</param>
+        /// <returns>Product searched based on product ID</returns>
+        /// <response code="200">Returned product detials</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">Product Details not found</response>
         [HttpGet("product/GetProductById/{id}")]
         public async Task<IActionResult> GetProductById(int id)
         {
@@ -60,6 +83,15 @@
             return NotFound("Product not found");
         }
 
+        /// <summary>
+        /// Add new product
+        /// </summary>
+        /// <param name="product">Product related details</param>
+        /// <returns>status code and message of response</returns>
+        /// <response code="200">New Product added successfully</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">Product Details not found</response>
+        /// <response code="400">Some input value is not valid</response>
         [Authorize]
         [HttpPost("Product/AddProduct")]
         public async Task<IActionResult> AddProduct([FromBody] Product product)
@@ -74,7 +106,16 @@
             await _productServices.AddProduct(product);
             return Ok("Product Added Successfully");
         }
-        
+
+        /// <summary>
+        /// Update the product details
+        /// </summary>
+        /// <param name="product">Product related details</param>
+        /// <returns>status code and message of response</returns>
+        /// <response code="200">Product updated successfully</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">Product Details not found</response>
+        /// <response code="400">Some input value is not valid</response>
         [Authorize]
         [HttpPut("Product/UpdateProduct")]
         public async Task<IActionResult> UpdateProduct([FromBody] Product product)
@@ -92,6 +133,14 @@
             return NotFound("Product not Updated");
         }
 
+        /// <summary>
+        /// Delete a product
+        /// </summary>
+        /// <param name="id">product Id to be deleted</param>
+        /// <returns>status code and message of response</returns>
+        /// <response code="200">Product deleted succsefully</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">Product Details not found</response>
         [Authorize]
         [HttpDelete("product/DeleteProduct/{id}")]
         public async Task<IActionResult> DeleteProduct(int id)

@@ -7,13 +7,13 @@
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "UserId is required")]
         public string TokenUserId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Address is required")]
         public string Address { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Phone number is required")]
         public string PhoneNumber { get; set; }
 
         [JsonIgnore]

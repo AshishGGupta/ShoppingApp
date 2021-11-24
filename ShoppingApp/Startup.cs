@@ -18,6 +18,8 @@ namespace ShoppingApp
     using System.IO;
     using ShoppingApp.Services.Services;
     using System.Diagnostics.CodeAnalysis;
+    using System.Reflection;
+    using System;
 
     [ExcludeFromCodeCoverage]
     public class Startup
@@ -54,8 +56,12 @@ namespace ShoppingApp
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ShoppingApp", Version = "v1" });
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
-
+            
             services.Configure<SignUpDetails>(Configuration.GetSection("AuthDetails:SignupDetails"));
             services.Configure<LoginDetails>(Configuration.GetSection("AuthDetails:LoginDetails"));
 

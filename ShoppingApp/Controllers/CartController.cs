@@ -24,6 +24,10 @@
             _logger = logger;
         }
 
+        /// <summary>
+        /// Gets the cart details.
+        /// </summary>
+        /// <returns>Products added to the cart</returns>
         [HttpGet("Cart/GetCartDetails")]
         public IActionResult GetCartDetails()
         {
@@ -31,6 +35,14 @@
             return Ok("Please Login to check your cart details!");
         }
 
+        /// <summary>
+        /// Get cart details for given user
+        /// </summary>
+        /// <param name="userId">Loggin user's userId</param>
+        /// <returns>List of products added to the cart</returns>
+        /// <response code="200">Returned cart details</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">Cart Details not found</response>
         [HttpGet("Cart/GetCartDetails/{userId}")]
         public async Task<IActionResult> GetCartDetails(string userId)
         {
@@ -49,6 +61,15 @@
             return NotFound("Your Cart is Empty");
         }
 
+        /// <summary>
+        /// Add to cart a product
+        /// </summary>
+        /// <param name="cart">Cart model details</param>
+        /// <returns> Response message</returns>
+        /// <response code="200">Product added to cart successfully</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">Cart Details not found</response>
+        /// <response code="400">Some input value is not valid</response>
         [HttpPost("Cart/AddToCart")]
         public async Task<IActionResult> AddToCart([FromBody] Cart cart)
         {
@@ -63,6 +84,15 @@
             return Ok("Product added to Cart Successfully");
         }
 
+        /// <summary>
+        /// Update cart details
+        /// </summary>
+        /// <param name="cart">Cart model details to update</param>
+        /// <returns>Status code if updated succesfully</returns>
+        /// <response code="200"> cart updated successfully</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">Cart Details not found</response>
+        /// <response code="400">Some input value is not valid</response>
         [HttpPut("Cart/UpdateCartDetails")]
         public async Task<IActionResult> UpdateCartDetails([FromBody] Cart cart)
         {
@@ -81,6 +111,15 @@
             return NotFound("Product Not Found");
         }
 
+        /// <summary>
+        /// Remove an item from cart
+        /// </summary>
+        /// <param name="id">Cart Id to remove</param>
+        /// <param name="userId">Loggin user's userId</param>
+        /// <returns>Status Code and message of response</returns>
+        /// <response code="200"> Item removed from cart successfully</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">Cart Details not found</response>
         [HttpDelete("Cart/DeleteFromCart/{id}/{userId}")]
         public async Task<IActionResult> DeleteFromCart(int id, string userId)
         {

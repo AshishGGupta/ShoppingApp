@@ -25,6 +25,14 @@
             _logger = logger;
         }
 
+        /// <summary>
+        /// Get User Details
+        /// </summary>
+        /// <param name="userId">logged in user's userId</param>
+        /// <returns>List of user detials</returns>
+        /// <response code="200">Returned User detials</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">User Details not found</response>
         [HttpGet("UserDetails/GetUserDetails/{userId}")]
         public async Task<IActionResult> GetUserDetails(string userId)
         {
@@ -46,6 +54,15 @@
             return NotFound("UserDetails not found");
         }
 
+        /// <summary>
+        /// Add new user details
+        /// </summary>
+        /// <param name="userDetails">user's delivery related details</param>
+        /// <returns>status code and message of response</returns>
+        /// <response code="200">New User detials added successfully</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">User Details not found</response>
+        /// <response code="400">Some input value is not valid</response>
         [HttpPost("UserDetails/AddUserDetails")]
         public async Task<IActionResult> AddUserDetails([FromBody] UserDetails userDetails)
         {
@@ -62,7 +79,15 @@
             return Ok("User details added successfully");
         }
 
-        // PUT api/<UserDetailsController>/5
+        /// <summary>
+        /// Updated user details
+        /// </summary>
+        /// <param name="userDetails">user's delivery related details</param>
+        /// <returns>status code and message of response</returns>
+        /// <response code="200">User details updated successfully</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">User Details not found</response>
+        /// <response code="400">Some input value is not valid</response>
         [HttpPut("UserDetails/UpdateUserDetails")]
         public async Task<IActionResult> UpdateUserDetails([FromBody] UserDetails userDetails)
         {
@@ -82,6 +107,15 @@
             return NotFound("User Details not found");
         }
 
+        /// <summary>
+        /// Delete User delivery data
+        /// </summary>
+        /// <param name="userDetailsId">User Details Id</param>
+        /// <param name="userId">logged in user's userId</param>
+        /// <returns>status code and message of response</returns>
+        /// <response code="200">User details deleted successfully</response>
+        /// <response code="401">Unauthorized user</response>
+        /// <response code="404">User Details not found</response>v
         [HttpDelete("UserDetails/DeleteUserDetails/{userDetailsId}/{userId}")]
         public async Task<IActionResult> DeleteUserDetails(int userDetailsId, string userId)
         {

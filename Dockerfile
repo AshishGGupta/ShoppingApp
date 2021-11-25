@@ -1,5 +1,4 @@
-# use a node base image
-FROM node:8-onbuild
+FROM openjdk:8
 
 # set maintainer
 LABEL maintainer "crudsinfotechng@gmail.com"

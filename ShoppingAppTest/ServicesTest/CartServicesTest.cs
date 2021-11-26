@@ -11,8 +11,7 @@
 
     public class CartServicesTest
     {
-        private readonly Mock<ICartDbService> _cartDbService;
-        private readonly Mock<IUserDbServices> _userDbServices;
+        private readonly Mock<IDbFacade> _dbFacade;
         private readonly Mock<ILogger<CartServices>> _logger;
         private readonly CartServices _cartServices;
         private readonly GetData _getData;
@@ -21,18 +20,17 @@
         public CartServicesTest()
         {
             _getData = new GetData();
-            _cartDbService = new Mock<ICartDbService>();
-            _userDbServices = new Mock<IUserDbServices>();
+            _dbFacade = new Mock<IDbFacade>();
             _logger = new Mock<ILogger<CartServices>>();
-            _cartServices = new CartServices(_cartDbService.Object, _userDbServices.Object, _logger.Object);
+            _cartServices = new CartServices(_dbFacade.Object, _logger.Object);
         }
 
         [Fact]
         public void GetCartDetails_Success()
         {
             //Arrange
-            _cartDbService.Setup(x => x.GetCartDetails(userId)).ReturnsAsync(_getData.GetCartData());
-            _userDbServices.Setup(x => x.GetUserDetails(userId)).ReturnsAsync(_getData.GetUserDetailsData());
+            _dbFacade.Setup(x => x.CartDbService.GetCartDetails(userId)).ReturnsAsync(_getData.GetCartData());
+            _dbFacade.Setup(x => x.UserDBServices.GetUserDetails(userId)).ReturnsAsync(_getData.GetUserDetailsData());
             //Act
             var result = _cartServices.GetCartDetails(userId).Result;
             //Assert
@@ -43,8 +41,8 @@
         public void GetCartDetails_EmptyCartList()
         {
             //Arrange
-            _cartDbService.Setup(x => x.GetCartDetails(userId));
-            _userDbServices.Setup(x => x.GetUserDetails(userId));
+            _dbFacade.Setup(x => x.CartDbService.GetCartDetails(userId));
+            _dbFacade.Setup(x => x.UserDBServices.GetUserDetails(userId));
             //Act
             var result = _cartServices.GetCartDetails(userId).Result;
             //Assert
@@ -56,8 +54,8 @@
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
-            _cartDbService.Setup(x => x.CartItemExistsByProductId(cart.CartId, userId));
-            _cartDbService.Setup(x => x.AddToCart(cart));
+            _dbFacade.Setup(x => x.CartDbService.CartItemExistsByProductId(cart.CartId, userId));
+            _dbFacade.Setup(x => x.CartDbService.AddToCart(cart));
             //Act
             await _cartServices.AddToCart(cart);
             //Assert
@@ -69,8 +67,8 @@
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
-            _cartDbService.Setup(x => x.CartItemExistsByProductId(cart.CartId, userId)).ReturnsAsync(cart);
-            _cartDbService.Setup(x => x.Edit(cart));
+            _dbFacade.Setup(x => x.CartDbService.CartItemExistsByProductId(cart.CartId, userId)).ReturnsAsync(cart);
+            _dbFacade.Setup(x => x.CartDbService.Edit(cart));
             //Act
             await _cartServices.AddToCart(cart);
             //Assert
@@ -82,8 +80,8 @@
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
-            _cartDbService.Setup(x => x.CartItemExists(cart.CartId)).ReturnsAsync(cart);
-            _cartDbService.Setup(x => x.Delete(cart));
+            _dbFacade.Setup(x => x.CartDbService.CartItemExists(cart.CartId)).ReturnsAsync(cart);
+            _dbFacade.Setup(x => x.CartDbService.Delete(cart));
             //Act
             bool isSuccess = _cartServices.Delete(cart.CartId).Result;
             //Assert
@@ -95,8 +93,8 @@
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
-            _cartDbService.Setup(x => x.CartItemExists(cart.CartId));
-            _cartDbService.Setup(x => x.Delete(cart));
+            _dbFacade.Setup(x => x.CartDbService.CartItemExists(cart.CartId));
+            _dbFacade.Setup(x => x.CartDbService.Delete(cart));
             //Act
             bool isSuccess = _cartServices.Delete(cart.CartId).Result;
             //Assert
@@ -108,8 +106,8 @@
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
-            _cartDbService.Setup(x => x.CartItemExists(cart.CartId)).ReturnsAsync(cart);
-            _cartDbService.Setup(x => x.Edit(cart));
+            _dbFacade.Setup(x => x.CartDbService.CartItemExists(cart.CartId)).ReturnsAsync(cart);
+            _dbFacade.Setup(x => x.CartDbService.Edit(cart));
             //Act
             bool isSuccess = _cartServices.Edit(cart).Result;
             //Assert
@@ -121,8 +119,8 @@
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
-            _cartDbService.Setup(x => x.CartItemExists(cart.CartId));
-            _cartDbService.Setup(x => x.Edit(cart));
+            _dbFacade.Setup(x => x.CartDbService.CartItemExists(cart.CartId));
+            _dbFacade.Setup(x => x.CartDbService.Edit(cart));
             //Act
             bool isSuccess = _cartServices.Edit(cart).Result;
             //Assert
@@ -135,8 +133,8 @@
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
             cart.Quantity = "0";
-            _cartDbService.Setup(x => x.CartItemExists(cart.CartId)).ReturnsAsync(cart);
-            _cartDbService.Setup(x => x.Edit(cart));
+            _dbFacade.Setup(x => x.CartDbService.CartItemExists(cart.CartId)).ReturnsAsync(cart);
+            _dbFacade.Setup(x => x.CartDbService.Edit(cart));
             //Act
             bool isSuccess = _cartServices.Edit(cart).Result;
             //Assert

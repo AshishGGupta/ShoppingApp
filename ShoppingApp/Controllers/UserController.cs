@@ -1,8 +1,9 @@
 ﻿namespace ShoppingApp.Controllers
 {
+    using MediatR;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
-    using ShoppingApp.Services.IServices;
+    using ShoppingApp.Models.MediatorClass;
     using ShoppingApp.Models.Model;
     using ShoppingApp.Services.Validation;
     using System.Threading.Tasks;
@@ -11,12 +12,12 @@
     [ServiceFilter(typeof(ExceptionAttribute))]
     public class UserController : Controller
     {
-        private readonly IUserServices _userServices;
+        private readonly IMediator _mediator;
         private readonly ILogger<UserController> _logger;
 
-        public UserController(IUserServices userServices, ILogger<UserController> logger)
+        public UserController(IMediator mediator, ILogger<UserController> logger)
         {
-            _userServices = userServices;
+            _mediator = mediator;
             _logger = logger;
         }
 
@@ -28,10 +29,10 @@
         /// <response code="200">User Signed up successfully</response>
         /// <response code="400">Some input value is not valid</response>
         [HttpPost("User/SignUp")]
-        public async Task<IActionResult> SignUp([FromBody] UserModel userData)
+        public async Task<IActionResult> SignUp([FromBody] Signup userData)
         {
             _logger.LogInformation("Entering SignUp method");
-            var response = await _userServices.UserSignUp(userData);
+            ApiResponse response = await _mediator.Send(userData);
             return Ok(response);
         }
 
@@ -43,10 +44,10 @@
         /// <response code="200">User Logged in successfully</response>
         /// <response code="400">Some input value is not valid</response>
         [HttpPost("User/Login")]
-        public async Task<IActionResult> Login([FromBody] UserModel userData)
+        public async Task<IActionResult> Login([FromBody] LoginUser userData)
         {
             _logger.LogInformation("Entering Login method");
-            var response = await _userServices.UserLogin(userData);
+            var response = await _mediator.Send(userData);
             return Ok(response);
         }
     }

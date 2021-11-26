@@ -13,21 +13,17 @@
     public class OrderPaymentDetailsTest
     {
         private readonly OrderPaymentDetails _orderPaymentServices;
-        private readonly Mock<IOrderAndPaymentDBServices> _orderPaymentDBServices;
-        private readonly Mock<ICartDbService> _cartDbServices;
-        private readonly Mock<IDBServices> _productDbServices;
+        private readonly Mock<IDbFacade> _dbFacade;
         private readonly Mock<ILogger<OrderPaymentDetails>> _logger;
         private readonly GetData _getData;
         private readonly string userId = "user123";
 
         public OrderPaymentDetailsTest()
         {
-            _orderPaymentDBServices = new Mock<IOrderAndPaymentDBServices>();
-            _cartDbServices = new Mock<ICartDbService>();
-            _productDbServices = new Mock<IDBServices>();
+            _dbFacade = new Mock<IDbFacade>();
             _logger = new Mock<ILogger<OrderPaymentDetails>>();
             _getData = new GetData();
-            _orderPaymentServices = new OrderPaymentDetails(_orderPaymentDBServices.Object, _cartDbServices.Object, _productDbServices.Object, _logger.Object);
+            _orderPaymentServices = new OrderPaymentDetails(_dbFacade.Object, _logger.Object);
         }
 
         [Fact]
@@ -37,9 +33,9 @@
             var cartList = _getData.GetCartData();
             var orderPaymentDetails = _getData.GetOrderAndPaymentdetails().FirstOrDefault();
             var orderPaymentRequest = _getData.GetOrderAndPaymentRequest();
-            _cartDbServices.Setup(x => x.GetCartDetails(userId)).ReturnsAsync(cartList);
-            _cartDbServices.Setup(x => x.BulkCartDelete(cartList));
-            _orderPaymentDBServices.Setup(x => x.AddOrderAndPaymentDetails(orderPaymentDetails));
+            _dbFacade.Setup(x => x.CartDbService.GetCartDetails(userId)).ReturnsAsync(cartList);
+            _dbFacade.Setup(x => x.CartDbService.BulkCartDelete(cartList));
+            _dbFacade.Setup(x => x.OrderDBServices.AddOrderAndPaymentDetails(orderPaymentDetails));
             //Act
             var result = await _orderPaymentServices.AddOrderPaymentDetails(orderPaymentRequest);
             //Assert
@@ -51,7 +47,7 @@
         {
             //Arrange
             var orderPaymentRequest = _getData.GetOrderAndPaymentRequest();
-            _cartDbServices.Setup(x => x.GetCartDetails(userId));
+            _dbFacade.Setup(x => x.CartDbService.GetCartDetails(userId));
             //Act
             var result = await _orderPaymentServices.AddOrderPaymentDetails(orderPaymentRequest);
             //Assert
@@ -64,8 +60,8 @@
             //Arrange
             var orderPaymentDetails = _getData.GetOrderAndPaymentdetails();
             var productList = _getData.GetProductsData();
-            _orderPaymentDBServices.Setup(x => x.GetOrderAndPaymentDetails(userId)).ReturnsAsync(orderPaymentDetails);
-            _productDbServices.Setup(x => x.GetProductByListOfId(It.IsAny<List<string>>())).ReturnsAsync(productList);
+            _dbFacade.Setup(x => x.OrderDBServices.GetOrderAndPaymentDetails(userId)).ReturnsAsync(orderPaymentDetails);
+            _dbFacade.Setup(x => x.DBServices.GetProductByListOfId(It.IsAny<List<string>>())).ReturnsAsync(productList);
             //Act
             var result = await _orderPaymentServices.GetOrderPaymentDetails(userId);
             //Assert
@@ -76,7 +72,7 @@
         public async Task GetOrderPaymentDetails_NoOrderDetailsFound()
         {
             //Arrange
-            _orderPaymentDBServices.Setup(x => x.GetOrderAndPaymentDetails(userId));
+            _dbFacade.Setup(x => x.OrderDBServices.GetOrderAndPaymentDetails(userId));
             //Act
             var result = await _orderPaymentServices.GetOrderPaymentDetails(userId);
             //Assert

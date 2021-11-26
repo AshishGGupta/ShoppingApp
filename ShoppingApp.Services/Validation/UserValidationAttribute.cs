@@ -30,7 +30,7 @@
                     else if (string.IsNullOrEmpty(user.Password))
                     {
                         _logger.LogInformation("Password cannot be null or empty");
-                        context.Result = new BadRequestObjectResult(new ValidationResponse(StatusCodes.Status400BadRequest, parameter.Value + "Password cannot be null or empty"));
+                        context.Result = new BadRequestObjectResult(new ValidationResponse(StatusCodes.Status400BadRequest, "Password cannot be null or empty"));
                         break;
                     }
                 }

@@ -21,6 +21,8 @@ namespace ShoppingApp
     using System.Reflection;
     using System;
     using ShoppingApp.Models;
+    using MediatR;
+    using ShoppingApp.Services;
 
     [ExcludeFromCodeCoverage]
     public class Startup
@@ -40,8 +42,8 @@ namespace ShoppingApp
                          .WriteTo.File($"{Directory.GetCurrentDirectory()}\\Logs\\Log.txt")
                          .CreateLogger();
 
+            services.AddMediatR(ServicesStaticClass.servicesAssembly);
             services.AddDbContext<ShoppingDbContext>(option => option.UseSqlServer(Configuration["ConnectionStrings:Name"]));
-            services.AddScoped<IUserServices, UserServices>();
             services.AddScoped<IDBServices, DBServices>();
             services.AddScoped<ICartDbService, CartDbServices>();
             services.AddScoped<IOrderAndPaymentDBServices, OrderAndPaymentDbServices>();
@@ -51,6 +53,7 @@ namespace ShoppingApp
             services.AddScoped<IUserDetailServices, UserDetailServices>();
             services.AddScoped<IOrderPaymentDetails, OrderPaymentDetails>();
             services.AddScoped<ProductSortAndFilter>();
+            services.AddScoped<DbFacade>();
             services.AddScoped<UserValidationAttribute>();
             services.AddScoped<ExceptionAttribute>();
             services.AddControllers();

@@ -9,33 +9,33 @@
 
     public class UserDetailServices : IUserDetailServices
     {
-        private readonly IUserDbServices _userDbServices;
+        private readonly IDbFacade _dbCollection;
         private readonly ILogger<UserDetailServices> _logger;
 
-        public UserDetailServices(IUserDbServices userDbServices, ILogger<UserDetailServices> logger)
+        public UserDetailServices(IDbFacade dbFacade, ILogger<UserDetailServices> logger)
         {
-            _userDbServices = userDbServices;
+            _dbCollection = dbFacade;
             _logger = logger;
         }
 
         public async Task<List<UserDetails>> GetUserDetails(string userId)
         {
-            return await _userDbServices.GetUserDetails(userId);
+            return await _dbCollection.UserDBServices.GetUserDetails(userId);
         }
 
         public async Task AddUserDetail(UserDetails userDetails)
         {
-            await _userDbServices.AddUserDetails(userDetails);
+            await _dbCollection.UserDBServices.AddUserDetails(userDetails);
         }
 
         public async Task<bool> EditUserDetail(UserDetails userDetails)
         {
-            var existingUserDetails = await _userDbServices.UserItemExists(userDetails.Id, userDetails.TokenUserId);
+            var existingUserDetails = await _dbCollection.UserDBServices.UserItemExists(userDetails.Id, userDetails.TokenUserId);
             if (existingUserDetails != null)
             {
                 existingUserDetails.Address = userDetails.Address;
                 existingUserDetails.PhoneNumber = userDetails.PhoneNumber;
-                await _userDbServices.UpdateUserDetails(existingUserDetails);
+                await _dbCollection.UserDBServices.UpdateUserDetails(existingUserDetails);
                 _logger.LogInformation("User details updated successfully");
                 return true;
             }
@@ -45,10 +45,10 @@
 
         public async Task<bool> DeleteUserDetail(int userDetailsId, string userId)
         {
-            var userDetails = await _userDbServices.UserItemExists(userDetailsId, userId);
+            var userDetails = await _dbCollection.UserDBServices.UserItemExists(userDetailsId, userId);
             if (userDetails != null)
             {
-                await _userDbServices.DeleteUserDetail(userDetails);
+                await _dbCollection.UserDBServices.DeleteUserDetail(userDetails);
                 _logger.LogInformation("User details deleted successfully");
                 return true;
             }

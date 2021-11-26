@@ -20,6 +20,7 @@ namespace ShoppingApp
     using System.Diagnostics.CodeAnalysis;
     using System.Reflection;
     using System;
+    using ShoppingApp.Models;
 
     [ExcludeFromCodeCoverage]
     public class Startup
@@ -60,6 +61,7 @@ namespace ShoppingApp
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
+                c.IncludeXmlComments(ModelsStaticClass.modelsXmlPath);
             });
             
             services.Configure<SignUpDetails>(Configuration.GetSection("AuthDetails:SignupDetails"));
@@ -85,9 +87,9 @@ namespace ShoppingApp
             {
                 //app.UseExceptionHandler("/error");
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ShoppingApp v1"));
             }
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ShoppingApp v1"));
 
             app.UseSerilogRequestLogging();
             // 2. Enable authentication middleware

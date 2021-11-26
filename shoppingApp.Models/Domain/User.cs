@@ -6,9 +6,15 @@
 
     public class User
     {
+        /// <summary>
+        /// User Id
+        /// </summary>
         [Key]
         public string TokenUserId { get; set; }
 
+        /// <summary>
+        /// User name
+        /// </summary>
         public string UserName { get; set; }
 
         [JsonIgnore]

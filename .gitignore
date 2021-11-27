@@ -17,3 +17,6 @@
 /ShoppingApp.DataAccess/bin/Debug/net5.0
 /ShoppingApp.Services/bin/Debug/net5.0
 /ShoppingApp.Services/obj
+/obj/Docker
+/bin/Debug
+/obj/Debug

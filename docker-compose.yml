@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  shoppingapp:
+    image: ${DOCKER_REGISTRY-}shoppingapp
+    build:
+      context: .
+      args:
+        - ASPNETCORE_ENVIRONMENT_ARG=Debug
+      dockerfile: ShoppingApp/Dockerfile
+    ports:     
+      - "8081:80"
+      - "8082:443"

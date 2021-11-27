@@ -7,13 +7,20 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingApp", "ShoppingApp\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingAppTest", "ShoppingAppTest\ShoppingAppTest.csproj", "{A1C9ED5B-CC0E-4FFC-A815-B951F7184D8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingApp.Models", "shoppingApp.Models\ShoppingApp.Models.csproj", "{94BDC365-F6B3-41A6-9464-B56A7EC97776}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingApp.Models", "shoppingApp.Models\ShoppingApp.Models.csproj", "{94BDC365-F6B3-41A6-9464-B56A7EC97776}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingApp.DataAccess", "ShoppingApp.DataAccess\ShoppingApp.DataAccess.csproj", "{1804DA40-0A8E-40BB-B147-2468A1726732}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingApp.DataAccess", "ShoppingApp.DataAccess\ShoppingApp.DataAccess.csproj", "{1804DA40-0A8E-40BB-B147-2468A1726732}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingApp.Common", "ShoppingApp.Common\ShoppingApp.Common.csproj", "{3886AEDE-2B63-48B6-BB02-6695836E9002}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingApp.Common", "ShoppingApp.Common\ShoppingApp.Common.csproj", "{3886AEDE-2B63-48B6-BB02-6695836E9002}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingApp.Services", "ShoppingApp.Services\ShoppingApp.Services.csproj", "{180BBC33-565A-4C0D-A1FB-E3A25D09BDF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingApp.Services", "ShoppingApp.Services\ShoppingApp.Services.csproj", "{180BBC33-565A-4C0D-A1FB-E3A25D09BDF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8FF7BA6C-1D39-4E11-B714-21BFE325E38B}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{EB83CEF3-26CB-45E5-A434-58295A01C08C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +52,10 @@ Global
 		{180BBC33-565A-4C0D-A1FB-E3A25D09BDF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{180BBC33-565A-4C0D-A1FB-E3A25D09BDF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{180BBC33-565A-4C0D-A1FB-E3A25D09BDF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB83CEF3-26CB-45E5-A434-58295A01C08C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB83CEF3-26CB-45E5-A434-58295A01C08C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB83CEF3-26CB-45E5-A434-58295A01C08C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB83CEF3-26CB-45E5-A434-58295A01C08C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

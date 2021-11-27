@@ -53,7 +53,7 @@ namespace ShoppingApp
             services.AddScoped<IUserDetailServices, UserDetailServices>();
             services.AddScoped<IOrderPaymentDetails, OrderPaymentDetails>();
             services.AddScoped<ProductSortAndFilter>();
-            services.AddScoped<DbFacade>();
+            services.AddScoped<IDbFacade, DbFacade>();
             services.AddScoped<UserValidationAttribute>();
             services.AddScoped<ExceptionAttribute>();
             services.AddControllers();

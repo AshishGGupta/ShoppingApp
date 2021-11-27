@@ -1,7 +1,7 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
 #First Image used as Base
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 
 #Work directory
 WORKDIR /app
@@ -11,7 +11,7 @@ EXPOSE 80
 EXPOSE 443
 
 #Image used for the Build process 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 
 #Creating a work directory named src and copying .csproj files of Shopping-API and Shopping-Data projects
 WORKDIR /src
@@ -30,10 +30,6 @@ COPY . .
 #New directory
 WORKDIR "/src/ShoppingApp"
 
-#Arg variable used with Docker Build Command with a default value
-ARG ASPNETCORE_ENVIRONMENT_ARG=Debug
-ENV ASPNETCORE_ENVIRONMENT_ENV=$ASPNETCORE_ENVIRONMENT_ARG
-
 #Running the build command and stablishing the Compile mode and Output directory
 RUN dotnet build "ShoppingApp.csproj" -o /app/build
 
@@ -46,10 +42,6 @@ RUN dotnet test "ShoppingAppTest.csproj" --logger "trx;LogFileName=ShoppingApp-t
 
 #Using the previous Build command output to make a Publish command 
 FROM build AS publish
-
-#Arg variable used with Docker Build Command with a default value
-ARG ASPNETCORE_ENVIRONMENT_ARG=Debug
-ENV ASPNETCORE_ENVIRONMENT_ENV=$ASPNETCORE_ENVIRONMENT_ARG
 
 #Running the publish command and stablishing the Compile mode and Output directory 
 RUN dotnet publish "ShoppingApp.csproj" -o /app/publish

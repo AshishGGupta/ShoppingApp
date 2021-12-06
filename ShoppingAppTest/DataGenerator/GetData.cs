@@ -60,6 +60,7 @@ namespace ShoppingAppTest.Common
                     Category = "Mobile",
                     DateAdded = DateTime.Now,
                     Price = 10000,
+                    ProductQuantity = 10,
                     ExpiryDate = DateTime.Now.AddDays(10),
                 },
                 new Product()
@@ -70,6 +71,7 @@ namespace ShoppingAppTest.Common
                     Category = "Mobile",
                     DateAdded = DateTime.Now,
                     Price = 10000,
+                    ProductQuantity = 10,
                     ExpiryDate = DateTime.Now.AddDays(10),
                 },
             };
@@ -139,6 +141,22 @@ namespace ShoppingAppTest.Common
             };
         }
 
+        public List<ProductDetailsForOrder> GetProductDetailsForOrder()
+        {
+            return new List<ProductDetailsForOrder>()
+            {
+                new ProductDetailsForOrder()
+                {
+                    Products = GetProductsData().FirstOrDefault(),
+                    ProductQuantity = 1
+                },
+                new ProductDetailsForOrder()
+                {
+                    Products = GetProductsData().FirstOrDefault(),
+                    ProductQuantity = 2
+                }
+            };
+        }
         public List<OrderAndPaymentResponse> GetOrderAndPaymentResponse()
         {
             return new List<OrderAndPaymentResponse>()
@@ -148,7 +166,7 @@ namespace ShoppingAppTest.Common
                     OrderDate = DateTime.Now,
                     OrderId = 1,
                     PaymentType = "COD",
-                    Products = GetProductsData(),
+                    productDetailsForOrders = GetProductDetailsForOrder(),
                     TokenUserId = "user123",
                     TotalQuantity = 2,
                     UserDetail = GetUserDetailsData().FirstOrDefault()
@@ -158,7 +176,7 @@ namespace ShoppingAppTest.Common
                     OrderDate = DateTime.Now,
                     OrderId = 2,
                     PaymentType = "COD",
-                    Products = GetProductsData(),
+                    productDetailsForOrders = GetProductDetailsForOrder(),
                     TokenUserId = "user123",
                     TotalQuantity = 2,
                     UserDetail = GetUserDetailsData().FirstOrDefault()
@@ -176,7 +194,7 @@ namespace ShoppingAppTest.Common
                     OrderId = 1,
                     Quantity = 1,
                     PaymentType = "Cod",
-                    ProductId = "[1]",
+                    ProductId = 1,
                     TokenUserId = "user123",
                     UserDetailsId = 1,
                     UserDetail = GetUserDetailsData().FirstOrDefault()
@@ -187,7 +205,7 @@ namespace ShoppingAppTest.Common
                     OrderId = 1,
                     Quantity = 1,
                     PaymentType = "Cod",
-                    ProductId = "[2]",
+                    ProductId = 2,
                     TokenUserId = "user123",
                     UserDetailsId = 1,
                     UserDetail = GetUserDetailsData().FirstOrDefault()

@@ -7,6 +7,7 @@
     using ShoppingApp.Controllers;
     using ShoppingApp.Services.IServices;
     using ShoppingAppTest.Common;
+    using System.Linq;
     using System.Security.Claims;
     using System.Threading.Tasks;
     using Xunit;
@@ -84,7 +85,7 @@
         public async Task GetOrderPaymentDetails_SuccessfullyAddedToCart()
         {
             //Arrange
-            _orderPaymentServices.Setup(x => x.GetOrderPaymentDetails(userId)).ReturnsAsync(_getData.GetOrderAndPaymentResponse());
+            _orderPaymentServices.Setup(x => x.GetOrderPaymentDetails(userId)).ReturnsAsync(_getData.GetOrderAndPaymentResponse().FirstOrDefault());
             //Act
             var result = await _orderPaymentController.GetOrderPaymentDetails(userId);
             //Assert

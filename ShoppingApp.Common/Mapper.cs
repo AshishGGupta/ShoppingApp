@@ -9,31 +9,41 @@
 
     public class Mapper
     {
-        public OrderAndPayment MapOrderAndPaymentDetail(OrderAndPaymentRequest orderPaymentrequest, List<Cart>cartList)
+        public List<OrderAndPayment> MapOrderAndPaymentDetail(OrderAndPaymentRequest orderPaymentrequest, List<Cart> cartList)
         {
-            return new OrderAndPayment()
+            Guid orderToken = Guid.NewGuid();
+            var date = DateTime.Now;
+            return cartList.Select(x => new OrderAndPayment()
             {
+                OrderToken = orderToken,
                 PaymentType = orderPaymentrequest.PaymentType,
                 TokenUserId = orderPaymentrequest.TokenUserId,
                 UserDetailsId = orderPaymentrequest.UserDetailsId,
                 Quantity = cartList?.Count ?? 0,
-                ProductId = JsonConvert.SerializeObject(cartList.Select(x => x.ProductId).ToList()),
-                OrderDate = DateTime.Now
-            };
+                ProductId = x.ProductId,
+                ProductQuantity = cartList.Where(y => y.ProductId == x.ProductId).Select(y => Convert.ToInt32(y.Quantity)).FirstOrDefault(),
+                OrderDate = date
+            }).ToList();
         }
 
-        public List<OrderAndPaymentResponse> MapOrderPaymentResponse(List<OrderAndPayment> orderAndPayments, List<Product> products)
+        public OrderAndPaymentResponse MapOrderPaymentResponse(List<OrderAndPayment> orderAndPayments)
         {
+            var productDetailsForOrder = orderAndPayments.Select(x => new ProductDetailsForOrder()
+            {
+                Products = x.Product,
+                ProductQuantity = x.ProductQuantity
+            }).ToList();
             return orderAndPayments.Select(x => new OrderAndPaymentResponse()
             {
                 OrderId = x.OrderId,
+                OrderToken = x.OrderToken,
                 OrderDate = x.OrderDate,
                 PaymentType = x.PaymentType,
                 TokenUserId = x.TokenUserId,
                 TotalQuantity = x.Quantity,
                 UserDetail = x.UserDetail,
-                Products = products.Where(y => (x.ProductId.Substring(1, x.ProductId.Length - 2).Split(',')).ToList().Contains(y.ProductId.ToString())).ToList()
-            }).ToList();
+                productDetailsForOrders = productDetailsForOrder
+            }).FirstOrDefault();
         }
     }
 }

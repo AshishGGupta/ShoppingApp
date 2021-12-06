@@ -6,7 +6,7 @@
 
     public interface IOrderPaymentDetails
     {
-        Task<List<OrderAndPaymentResponse>> GetOrderPaymentDetails(string userId);
+        Task<OrderAndPaymentResponse> GetOrderPaymentDetails(string userId);
         Task<bool> AddOrderPaymentDetails(OrderAndPaymentRequest orderPaymentrequest);
     }
 }

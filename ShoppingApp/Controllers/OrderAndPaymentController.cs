@@ -66,7 +66,7 @@
                 return Unauthorized("Your are not authorized");
             }
             var orderPaymentDetails = await _orderPaymentDetails.GetOrderPaymentDetails(userId);
-            if(orderPaymentDetails?.Count > 0)
+            if(orderPaymentDetails?.productDetailsForOrders?.Count > 0)
                 return Ok(orderPaymentDetails);
             return NotFound("No order history found");
         }

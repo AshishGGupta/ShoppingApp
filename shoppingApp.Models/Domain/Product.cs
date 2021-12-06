@@ -40,6 +40,12 @@
         public decimal Price { get; set; }
 
         /// <summary>
+        /// Price of the product
+        /// </summary>
+        [Required]
+        public int ProductQuantity { get; set; }
+
+        /// <summary>
         /// Date of product added
         /// </summary>
         [Required]

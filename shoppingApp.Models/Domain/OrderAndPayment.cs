@@ -11,6 +11,9 @@
         /// </summary>
         [Key]
         public int OrderId { get; set; }
+
+        [Required]
+        public Guid OrderToken { get; set; }
         
         /// <summary>
         /// logged in user's userId
@@ -21,9 +24,14 @@
         /// <summary>
         /// product Id
         /// </summary>
-
         [Required(ErrorMessage = "ProductId is required")]
-        public string ProductId { get; set; }
+        public int ProductId { get; set; }
+
+        /// <summary>
+        /// product Id
+        /// </summary>
+        [Required(ErrorMessage = "ProductQuantity is required")]
+        public int ProductQuantity { get; set; }
 
         /// <summary>
         /// User details Id
@@ -48,6 +56,9 @@
         /// </summary>
         [Required(ErrorMessage = "Order date is required")]
         public DateTime OrderDate { get; set; }
+
+        [JsonIgnore]
+        public Product Product { get; set; }
 
         [JsonIgnore]
         public UserDetails UserDetail { get; set; }

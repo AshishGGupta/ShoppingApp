@@ -7,6 +7,6 @@
     public interface IOrderAndPaymentDBServices
     {
         Task<List<OrderAndPayment>> GetOrderAndPaymentDetails(string userId);
-        Task AddOrderAndPaymentDetails(OrderAndPayment orderAndPaymentDetail);
+        Task AddOrderAndPaymentDetails(List<OrderAndPayment> orderAndPaymentDetail);
     }
 }

@@ -3,6 +3,7 @@
     using Microsoft.Extensions.Logging;
     using Moq;
     using ShoppingApp.DataAccess.IDataAccess;
+    using ShoppingApp.Models.Domain;
     using ShoppingApp.Services.Services;
     using ShoppingAppTest.Common;
     using System.Collections.Generic;
@@ -31,11 +32,12 @@
         {
             //Arrange
             var cartList = _getData.GetCartData();
-            var orderPaymentDetails = _getData.GetOrderAndPaymentdetails().FirstOrDefault();
+            var orderPaymentDetails = _getData.GetOrderAndPaymentdetails();
             var orderPaymentRequest = _getData.GetOrderAndPaymentRequest();
             _dbFacade.Setup(x => x.CartDbService.GetCartDetails(userId)).ReturnsAsync(cartList);
             _dbFacade.Setup(x => x.CartDbService.BulkCartDelete(cartList));
             _dbFacade.Setup(x => x.OrderDBServices.AddOrderAndPaymentDetails(orderPaymentDetails));
+            _dbFacade.Setup(x => x.DBServices.UpdateProduct(It.IsAny<Product>()));
             //Act
             var result = await _orderPaymentServices.AddOrderPaymentDetails(orderPaymentRequest);
             //Assert
@@ -65,7 +67,7 @@
             //Act
             var result = await _orderPaymentServices.GetOrderPaymentDetails(userId);
             //Assert
-            Assert.NotEmpty(result);
+            Assert.NotNull(result);
         }
 
         [Fact]

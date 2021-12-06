@@ -15,12 +15,19 @@
 
         public string Message { get; set; }
 
+        public bool DeliveryChange { get; set; } = false;
+
         public CartResponse(List<ProductQuantity> product, List<UserDetails> userDetails, string msg)
         {
             ProductQuantity = product; 
             UserDetails = userDetails;
             Message = msg;
             TotalPrice = product?.Count > 0 ? product.Sum(x => x.Product.Price * x.Quantity) : 0;
+            if (TotalPrice <= 500)
+            {
+                DeliveryChange = true;
+                TotalPrice += 50;
+            }
         }
     }
 }

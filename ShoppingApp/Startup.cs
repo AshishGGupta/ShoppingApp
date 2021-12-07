@@ -46,6 +46,7 @@ namespace ShoppingApp
             services.AddDbContext<ShoppingDbContext>(option => option.UseSqlServer(Configuration["ConnectionStrings:Name"]));
             services.AddScoped<IDBServices, DBServices>();
             services.AddScoped<ICartDbService, CartDbServices>();
+            services.AddScoped<IDbInitializer, DbInitializer>();
             services.AddScoped<IOrderAndPaymentDBServices, OrderAndPaymentDbServices>();
             services.AddScoped<IProductServices, ProductServices>();
             services.AddScoped<ICartServices, CartServices>();
@@ -83,7 +84,7 @@ namespace ShoppingApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDbInitializer dbInitializer)
         {
             app.UseExceptionHandler("/error");
             if (env.IsDevelopment())
@@ -95,6 +96,9 @@ namespace ShoppingApp
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ShoppingApp v1"));
 
             app.UseSerilogRequestLogging();
+
+            dbInitializer.InitializeDB();
+
             // 2. Enable authentication middleware
             app.UseAuthentication();
 

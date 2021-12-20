@@ -7,10 +7,10 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    public class UserDbServices : IUserDbServices
+    public class UserDbServices : DbOperations<UserDetails>, IUserDbServices
     {
         private readonly ShoppingDbContext _dbContext;
-        public UserDbServices(ShoppingDbContext dbContext)
+        public UserDbServices(ShoppingDbContext dbContext): base(dbContext)
         {
             _dbContext = dbContext;
         }

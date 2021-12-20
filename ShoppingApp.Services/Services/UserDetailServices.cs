@@ -25,17 +25,17 @@
 
         public async Task AddUserDetail(UserDetails userDetails)
         {
-            await _dbCollection.UserDBServices.AddUserDetails(userDetails);
+            await _dbCollection.UserDBServices.AddItem(userDetails);
         }
 
         public async Task<bool> EditUserDetail(UserDetails userDetails)
         {
-            var existingUserDetails = await _dbCollection.UserDBServices.UserItemExists(userDetails.Id, userDetails.TokenUserId);
+            var existingUserDetails = await _dbCollection.UserDBServices.GetItemById(x => x.Id == userDetails.Id && x.TokenUserId == userDetails.TokenUserId);
             if (existingUserDetails != null)
             {
                 existingUserDetails.Address = userDetails.Address;
                 existingUserDetails.PhoneNumber = userDetails.PhoneNumber;
-                await _dbCollection.UserDBServices.UpdateUserDetails(existingUserDetails);
+                await _dbCollection.UserDBServices.UpdateItem(existingUserDetails);
                 _logger.LogInformation("User details updated successfully");
                 return true;
             }
@@ -45,10 +45,10 @@
 
         public async Task<bool> DeleteUserDetail(int userDetailsId, string userId)
         {
-            var userDetails = await _dbCollection.UserDBServices.UserItemExists(userDetailsId, userId);
+            var userDetails = await _dbCollection.UserDBServices.GetItemById(x => x.Id == userDetailsId && x.TokenUserId == userId);
             if (userDetails != null)
             {
-                await _dbCollection.UserDBServices.DeleteUserDetail(userDetails);
+                await _dbCollection.UserDBServices.DeleteItem(userDetails);
                 _logger.LogInformation("User details deleted successfully");
                 return true;
             }

@@ -37,7 +37,7 @@
             _dbFacade.Setup(x => x.CartDbService.GetCartDetails(userId)).ReturnsAsync(cartList);
             _dbFacade.Setup(x => x.CartDbService.BulkCartDelete(cartList));
             _dbFacade.Setup(x => x.OrderDBServices.AddOrderAndPaymentDetails(orderPaymentDetails));
-            _dbFacade.Setup(x => x.ProductDbServices.UpdateProduct(It.IsAny<Product>()));
+            _dbFacade.Setup(x => x.ProductDbServices.UpdateItem(It.IsAny<Product>()));
             //Act
             var result = await _orderPaymentServices.AddOrderPaymentDetails(orderPaymentRequest);
             //Assert

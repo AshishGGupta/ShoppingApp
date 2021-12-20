@@ -41,7 +41,7 @@ namespace ShoppingAppTest.ServicesTest
         {
             //Arrange
             var userDetail = _getData.GetUserDetailsData().FirstOrDefault();
-            _dbFacade.Setup(x => x.UserDBServices.AddUserDetails(userDetail));
+            _dbFacade.Setup(x => x.UserDBServices.AddItem(userDetail));
             //Act
             await _userDetailServices.AddUserDetail(userDetail);
             //Assert
@@ -53,8 +53,8 @@ namespace ShoppingAppTest.ServicesTest
         {
             //Arrange
             var userDetail = _getData.GetUserDetailsData().FirstOrDefault();
-            _dbFacade.Setup(x => x.UserDBServices.UserItemExists(userDetail.Id, userDetail.TokenUserId)).ReturnsAsync(userDetail);
-            _dbFacade.Setup(x => x.UserDBServices.UpdateUserDetails(userDetail));
+            _dbFacade.Setup(x => x.UserDBServices.GetItemById(x => x.Id == userDetail.Id && x.TokenUserId == userDetail.TokenUserId)).ReturnsAsync(userDetail);
+            _dbFacade.Setup(x => x.UserDBServices.UpdateItem(userDetail));
             //Act
             bool isSuccess = await _userDetailServices.EditUserDetail(userDetail);
             //Assert
@@ -66,8 +66,8 @@ namespace ShoppingAppTest.ServicesTest
         {
             //Arrange
             var userDetail = _getData.GetUserDetailsData().FirstOrDefault();
-            _dbFacade.Setup(x => x.UserDBServices.UserItemExists(userDetail.Id, userDetail.TokenUserId));
-            _dbFacade.Setup(x => x.UserDBServices.UpdateUserDetails(userDetail));
+            _dbFacade.Setup(x => x.UserDBServices.GetItemById(x => x.Id == userDetail.Id && x.TokenUserId == userDetail.TokenUserId));
+            _dbFacade.Setup(x => x.UserDBServices.UpdateItem(userDetail));
             //Act
             bool isSuccess = await _userDetailServices.EditUserDetail(userDetail);
             //Assert
@@ -79,8 +79,10 @@ namespace ShoppingAppTest.ServicesTest
         {
             //Arrange
             var userDetail = _getData.GetUserDetailsData().FirstOrDefault();
-            _dbFacade.Setup(x => x.UserDBServices.UserItemExists(userDetail.Id, userDetail.TokenUserId)).ReturnsAsync(userDetail);
-            _dbFacade.Setup(x => x.UserDBServices.DeleteUserDetail(userDetail));
+            var userDetailsId = userDetail.Id;
+            var userId = userDetail.TokenUserId;
+            _dbFacade.Setup(x => x.UserDBServices.GetItemById(x => x.Id == userDetailsId && x.TokenUserId == userId)).ReturnsAsync(userDetail);
+            _dbFacade.Setup(x => x.UserDBServices.DeleteItem(userDetail));
             //Act
             bool isSuccess = await _userDetailServices.DeleteUserDetail(userDetail.Id, userDetail.TokenUserId);
             //Assert
@@ -92,8 +94,8 @@ namespace ShoppingAppTest.ServicesTest
         {
             //Arrange
             var userDetail = _getData.GetUserDetailsData().FirstOrDefault();
-            _dbFacade.Setup(x => x.UserDBServices.UserItemExists(userDetail.Id, userDetail.TokenUserId));
-            _dbFacade.Setup(x => x.UserDBServices.DeleteUserDetail(userDetail));
+            _dbFacade.Setup(x => x.UserDBServices.GetItemById(x => x.Id == userDetail.Id && x.TokenUserId == userDetail.TokenUserId));
+            _dbFacade.Setup(x => x.UserDBServices.DeleteItem(userDetail));
             //Act
             bool isSuccess = await _userDetailServices.DeleteUserDetail(userDetail.Id, userDetail.TokenUserId);
             //Assert

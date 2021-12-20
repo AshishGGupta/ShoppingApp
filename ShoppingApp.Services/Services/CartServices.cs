@@ -49,22 +49,22 @@
             {
                 _logger.LogInformation("Product already in cart. Increased product count by 1.");
                 existingCart.Quantity = (Convert.ToInt32(cart.Quantity) + 1).ToString();
-                await _dbCollection.CartDbService.Edit(existingCart);
+                await _dbCollection.CartDbService.UpdateItem(existingCart);
             }
             else
             {
                 _logger.LogInformation("Product added to cart successfully. productId:" + cart.ProductId);
-                await _dbCollection.CartDbService.AddToCart(cart);
+                await _dbCollection.CartDbService.AddItem(cart);
             }
         }
 
         public async Task<bool> Delete(int id)
         {
-            var cart = await _dbCollection.CartDbService.CartItemExists(id);
+            var cart = await _dbCollection.CartDbService.GetItemById(x => x.CartId == id);
             if (cart != null)
             {
                 _logger.LogInformation("Iteam Deleted successfully");
-                await _dbCollection.CartDbService.Delete(cart);
+                await _dbCollection.CartDbService.DeleteItem(cart);
                 return true;
             }
             _logger.LogInformation("Iteam Not found");
@@ -73,17 +73,17 @@
 
         public async Task<bool> Edit(Cart cart)
         {
-            var existingCart = await _dbCollection.CartDbService.CartItemExists(cart.CartId);
+            var existingCart = await _dbCollection.CartDbService.GetItemById(x => x.CartId == cart.CartId);
             if (existingCart != null)
             {
                 if (cart.Quantity != "0")
                 {
                     existingCart.Quantity = cart.Quantity;
-                    await _dbCollection.CartDbService.Edit(existingCart);
+                    await _dbCollection.CartDbService.UpdateItem(existingCart);
                 }
                 else
                 {
-                    await _dbCollection.CartDbService.Delete(existingCart);
+                    await _dbCollection.CartDbService.DeleteItem(existingCart);
                 }
                 _logger.LogInformation("Cart updated successfully");
                 return true;

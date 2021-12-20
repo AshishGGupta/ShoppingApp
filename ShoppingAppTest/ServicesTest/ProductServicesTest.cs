@@ -29,7 +29,7 @@
         public async Task GetProductList_Success()
         {
             //Arrange
-            _dbFacade.Setup(x => x.ProductDbServices.GetProductList()).ReturnsAsync(_getData.GetProductsData());
+            _dbFacade.Setup(x => x.ProductDbServices.GetItemList()).ReturnsAsync(_getData.GetProductsData());
             //Act
             var result = await _productServices.GetProductList();
             //Assert
@@ -52,7 +52,7 @@
         public async Task GetProductById_Success()
         {
             //Arrange
-            _dbFacade.Setup(x => x.ProductDbServices.GetProductById(1)).ReturnsAsync(_getData.GetProductsData().FirstOrDefault());
+            _dbFacade.Setup(x => x.ProductDbServices.GetItemById(x => x.ProductId == 1)).ReturnsAsync(_getData.GetProductsData().FirstOrDefault());
             //Act
             var result = await _productServices.GetProductById(1);
             //Assert
@@ -64,7 +64,7 @@
         {
             //Arrange
             var product = _getData.GetProductsData().FirstOrDefault();
-            _dbFacade.Setup(x => x.ProductDbServices.AddProduct(product));
+            _dbFacade.Setup(x => x.ProductDbServices.AddItem(product));
             //Act
             var result = await _productServices.AddProduct(product);
             //Assert
@@ -76,8 +76,8 @@
         {
             //Arrange
             var product = _getData.GetProductsData().FirstOrDefault();
-            _dbFacade.Setup(x => x.ProductDbServices.GetProductById(product.ProductId)).ReturnsAsync(product);
-            _dbFacade.Setup(x => x.ProductDbServices.UpdateProduct(product));
+            _dbFacade.Setup(x => x.ProductDbServices.GetItemById(x => x.ProductId == product.ProductId)).ReturnsAsync(product);
+            _dbFacade.Setup(x => x.ProductDbServices.UpdateItem(product));
             //Act
             bool isSuccess = await _productServices.UpdateProduct(product);
             //Assert
@@ -89,8 +89,8 @@
         {
             //Arrange
             var product = _getData.GetProductsData().FirstOrDefault();
-            _dbFacade.Setup(x => x.ProductDbServices.GetProductById(product.ProductId));
-            _dbFacade.Setup(x => x.ProductDbServices.UpdateProduct(product));
+            _dbFacade.Setup(x => x.ProductDbServices.GetItemById(x => x.ProductId == product.ProductId));
+            _dbFacade.Setup(x => x.ProductDbServices.UpdateItem(product));
             //Act
             bool isSuccess = await _productServices.UpdateProduct(product);
             //Assert
@@ -102,8 +102,9 @@
         {
             //Arrange
             var product = _getData.GetProductsData().FirstOrDefault();
-            _dbFacade.Setup(x => x.ProductDbServices.GetProductById(product.ProductId)).ReturnsAsync(product);
-            _dbFacade.Setup(x => x.ProductDbServices.DeleteProduct(product));
+            var productId = product.ProductId;
+            _dbFacade.Setup(x => x.ProductDbServices.GetItemById(x => x.ProductId == productId)).ReturnsAsync(product);
+            _dbFacade.Setup(x => x.ProductDbServices.DeleteItem(product));
             //Act
             bool isSuccess = await _productServices.DeleteProduct(product.ProductId);
             //Assert
@@ -115,8 +116,8 @@
         {
             //Arrange
             var product = _getData.GetProductsData().FirstOrDefault();
-            _dbFacade.Setup(x => x.ProductDbServices.GetProductById(product.ProductId));
-            _dbFacade.Setup(x => x.ProductDbServices.DeleteProduct(product));
+            _dbFacade.Setup(x => x.ProductDbServices.GetItemById(x => x.ProductId == product.ProductId));
+            _dbFacade.Setup(x => x.ProductDbServices.DeleteItem(product));
             //Act
             bool isSuccess = await _productServices.DeleteProduct(product.ProductId);
             //Assert

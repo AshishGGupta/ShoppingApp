@@ -55,7 +55,7 @@
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
             _dbFacade.Setup(x => x.CartDbService.CartItemExistsByProductId(cart.CartId, userId));
-            _dbFacade.Setup(x => x.CartDbService.AddToCart(cart));
+            _dbFacade.Setup(x => x.CartDbService.AddItem(cart));
             //Act
             await _cartServices.AddToCart(cart);
             //Assert
@@ -68,7 +68,7 @@
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
             _dbFacade.Setup(x => x.CartDbService.CartItemExistsByProductId(cart.CartId, userId)).ReturnsAsync(cart);
-            _dbFacade.Setup(x => x.CartDbService.Edit(cart));
+            _dbFacade.Setup(x => x.CartDbService.UpdateItem(cart));
             //Act
             await _cartServices.AddToCart(cart);
             //Assert
@@ -80,8 +80,9 @@
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
-            _dbFacade.Setup(x => x.CartDbService.CartItemExists(cart.CartId)).ReturnsAsync(cart);
-            _dbFacade.Setup(x => x.CartDbService.Delete(cart));
+            var id = cart.CartId;
+            _dbFacade.Setup(x => x.CartDbService.GetItemById(x => x.CartId == id)).ReturnsAsync(cart);
+            _dbFacade.Setup(x => x.CartDbService.DeleteItem(cart));
             //Act
             bool isSuccess = _cartServices.Delete(cart.CartId).Result;
             //Assert
@@ -93,8 +94,8 @@
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
-            _dbFacade.Setup(x => x.CartDbService.CartItemExists(cart.CartId));
-            _dbFacade.Setup(x => x.CartDbService.Delete(cart));
+            _dbFacade.Setup(x => x.CartDbService.GetItemById(x => x.CartId == cart.CartId));
+            _dbFacade.Setup(x => x.CartDbService.DeleteItem(cart));
             //Act
             bool isSuccess = _cartServices.Delete(cart.CartId).Result;
             //Assert
@@ -106,8 +107,8 @@
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
-            _dbFacade.Setup(x => x.CartDbService.CartItemExists(cart.CartId)).ReturnsAsync(cart);
-            _dbFacade.Setup(x => x.CartDbService.Edit(cart));
+            _dbFacade.Setup(x => x.CartDbService.GetItemById(x => x.CartId == cart.CartId)).ReturnsAsync(cart);
+            _dbFacade.Setup(x => x.CartDbService.UpdateItem(cart));
             //Act
             bool isSuccess = _cartServices.Edit(cart).Result;
             //Assert
@@ -119,8 +120,8 @@
         {
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
-            _dbFacade.Setup(x => x.CartDbService.CartItemExists(cart.CartId));
-            _dbFacade.Setup(x => x.CartDbService.Edit(cart));
+            _dbFacade.Setup(x => x.CartDbService.GetItemById(x => x.CartId == cart.CartId));
+            _dbFacade.Setup(x => x.CartDbService.UpdateItem(cart));
             //Act
             bool isSuccess = _cartServices.Edit(cart).Result;
             //Assert
@@ -133,8 +134,8 @@
             //Arrange
             var cart = _getData.GetCartData().FirstOrDefault();
             cart.Quantity = "0";
-            _dbFacade.Setup(x => x.CartDbService.CartItemExists(cart.CartId)).ReturnsAsync(cart);
-            _dbFacade.Setup(x => x.CartDbService.Edit(cart));
+            _dbFacade.Setup(x => x.CartDbService.GetItemById(x => x.CartId == cart.CartId)).ReturnsAsync(cart);
+            _dbFacade.Setup(x => x.CartDbService.UpdateItem(cart));
             //Act
             bool isSuccess = _cartServices.Edit(cart).Result;
             //Assert

@@ -9,11 +9,12 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    public class ProductDbServices : IProductDbServices
+    public class ProductDbServices : DbOperations<Product>, IProductDbServices
     {
         private readonly ShoppingDbContext _dbContext;
         private readonly ProductSortAndFilter _sortAndFilter;
-        public ProductDbServices(ShoppingDbContext dbContext, ProductSortAndFilter sortAndFilter)
+
+        public ProductDbServices(ShoppingDbContext dbContext, ProductSortAndFilter sortAndFilter) : base(dbContext)
         {
             _dbContext = dbContext;
             _sortAndFilter = sortAndFilter;
@@ -30,16 +31,7 @@
             return await _dbContext.Users.AnyAsync(x => x.UserName == userName);
         }
 
-        public async Task AddProduct(Product product)
-        {
-            await _dbContext.AddAsync(product);
-            await _dbContext.SaveChangesAsync();
-        }
-
-        public async Task<List<Product>> GetProductList()
-        {
-            return await _dbContext.Products.ToListAsync();
-        }
+        //Products
 
         public async Task<List<Product>> GetProductList(SortAndFilter sortFilter)
         {
@@ -50,27 +42,6 @@
             }
 
             return await query.ToListAsync();
-        }
-
-        public async Task<Product> GetProductById(int productId)
-        {
-            return await _dbContext.Products.FirstOrDefaultAsync(x => x.ProductId == productId);
-        }
-
-        public async Task UpdateProduct(Product product)
-        {
-            await _dbContext.SaveChangesAsync();
-        }
-
-        public async Task DeleteProduct(Product product)
-        {
-            _dbContext.Products.Remove(product);
-            await _dbContext.SaveChangesAsync();
-        }
-
-        public async Task<bool> ProductExists(int productId)
-        {
-            return await _dbContext.Products.AnyAsync(x => x.ProductId == productId);
         }
 
         public async Task<List<Product>> GetProductByListOfId(List<string> productIdList)

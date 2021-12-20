@@ -19,10 +19,10 @@
     public class SignUpHandler : IRequestHandler<Signup, ApiResponse>
     {
         private readonly SignUpDetails signupDetails;
-        private readonly IDBServices _dbServices;
+        private readonly IProductDbServices _dbServices;
         private readonly ILogger<LoginUserHandler> _logger;
 
-        public SignUpHandler(IOptions<SignUpDetails> iSignupDetails, IDBServices dbServices, ILogger<LoginUserHandler> logger)
+        public SignUpHandler(IOptions<SignUpDetails> iSignupDetails, IProductDbServices dbServices, ILogger<LoginUserHandler> logger)
         {
             signupDetails = iSignupDetails.Value;
             _dbServices = dbServices;

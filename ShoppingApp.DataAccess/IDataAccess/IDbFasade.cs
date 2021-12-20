@@ -3,7 +3,7 @@
     public interface IDbFacade
     {
         ICartDbService CartDbService { get; }
-        IDBServices DBServices { get; }
+        IProductDbServices ProductDbServices { get; }
         IOrderAndPaymentDBServices OrderDBServices { get; }
         IUserDbServices UserDBServices { get; }
     }    

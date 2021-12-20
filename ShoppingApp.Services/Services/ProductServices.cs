@@ -21,29 +21,29 @@
         
         public async Task<List<Product>> GetProductList()
         {
-            return await _dBCollection.DBServices.GetProductList();
+            return await _dBCollection.ProductDbServices.GetProductList();
         }
 
         public async Task<List<Product>> GetProductList(SortAndFilter sortFilter)
         {
-            return await _dBCollection.DBServices.GetProductList(sortFilter);
+            return await _dBCollection.ProductDbServices.GetProductList(sortFilter);
         }
 
         public async Task<bool> AddProduct(Product product)
         {
-            await _dBCollection.DBServices.AddProduct(product);
+            await _dBCollection.ProductDbServices.AddProduct(product);
             _logger.LogInformation("Product Added Successfully");
             return true;
         }
 
         public async Task<Product> GetProductById(int productId)
         {
-            return await _dBCollection.DBServices.GetProductById(productId);
+            return await _dBCollection.ProductDbServices.GetProductById(productId);
         }
 
         public async Task<bool> UpdateProduct(Product product)
         {
-            var existingProduct = await _dBCollection.DBServices.GetProductById(product.ProductId);
+            var existingProduct = await _dBCollection.ProductDbServices.GetProductById(product.ProductId);
             if (existingProduct != null)
             {
                 existingProduct.Name = product.Name;
@@ -52,7 +52,7 @@
                 existingProduct.Price = product.Price;
                 existingProduct.DateAdded = product.DateAdded;
                 existingProduct.ExpiryDate = product.ExpiryDate;
-                await _dBCollection.DBServices.UpdateProduct(existingProduct);
+                await _dBCollection.ProductDbServices.UpdateProduct(existingProduct);
                 _logger.LogInformation("Product updated successfully");
                 return true;
             }
@@ -62,10 +62,10 @@
 
         public async Task<bool> DeleteProduct(int productId)
         {
-            var existingProduct = await _dBCollection.DBServices.GetProductById(productId);
+            var existingProduct = await _dBCollection.ProductDbServices.GetProductById(productId);
             if (existingProduct != null)
             {
-                await _dBCollection.DBServices.DeleteProduct(existingProduct);
+                await _dBCollection.ProductDbServices.DeleteProduct(existingProduct);
                 _logger.LogInformation("Product delected successfully");
                 return true;
             }

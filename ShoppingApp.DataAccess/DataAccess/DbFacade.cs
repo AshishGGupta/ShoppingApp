@@ -6,16 +6,16 @@
     {
         public ICartDbService CartDbService { get; private set; }
 
-        public IDBServices DBServices { get; private set; }
+        public IProductDbServices ProductDbServices { get; private set; }
 
         public IOrderAndPaymentDBServices OrderDBServices { get; private set; }
 
         public IUserDbServices UserDBServices { get; private set; }
 
-        public DbFacade(ICartDbService cartDb, IDBServices productDb, IOrderAndPaymentDBServices orderDb, IUserDbServices userDb)
+        public DbFacade(ICartDbService cartDb, IProductDbServices productDb, IOrderAndPaymentDBServices orderDb, IUserDbServices userDb)
         {
             CartDbService = cartDb;
-            DBServices = productDb;
+            ProductDbServices = productDb;
             OrderDBServices = orderDb;
             UserDBServices = userDb;
         }

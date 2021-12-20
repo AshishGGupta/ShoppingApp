@@ -44,7 +44,7 @@ namespace ShoppingApp
 
             services.AddMediatR(ServicesStaticClass.servicesAssembly);
             services.AddDbContext<ShoppingDbContext>(option => option.UseSqlServer(Configuration["ConnectionStrings:Name"]));
-            services.AddScoped<IDBServices, DBServices>();
+            services.AddScoped<IProductDbServices, ProductDbServices>();
             services.AddScoped<ICartDbService, CartDbServices>();
             services.AddScoped<IDbInitializer, DbInitializer>();
             services.AddScoped<IOrderAndPaymentDBServices, OrderAndPaymentDbServices>();

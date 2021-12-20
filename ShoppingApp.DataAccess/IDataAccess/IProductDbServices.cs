@@ -5,7 +5,7 @@
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
-    public interface IDBServices
+    public interface IProductDbServices
     {
         //Login/signup
         Task RegisterUser(User user);

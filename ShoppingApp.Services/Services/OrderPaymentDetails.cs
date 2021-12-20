@@ -35,7 +35,7 @@
                 cartList.ForEach(x => x.Product.ProductQuantity = x.Product.ProductQuantity - Convert.ToInt32(x.Quantity));
                 foreach (var product in cartList.Select(x => x.Product))
                 {
-                    await _dbCollection.DBServices.UpdateProduct(product);
+                    await _dbCollection.ProductDbServices.UpdateProduct(product);
                 }
                 _logger.LogInformation("Order Placed Successfully. userId:" + orderPaymentrequest.TokenUserId);
                 return true;

@@ -9,11 +9,11 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    public class DBServices : IDBServices
+    public class ProductDbServices : IProductDbServices
     {
         private readonly ShoppingDbContext _dbContext;
         private readonly ProductSortAndFilter _sortAndFilter;
-        public DBServices(ShoppingDbContext dbContext, ProductSortAndFilter sortAndFilter)
+        public ProductDbServices(ShoppingDbContext dbContext, ProductSortAndFilter sortAndFilter)
         {
             _dbContext = dbContext;
             _sortAndFilter = sortAndFilter;

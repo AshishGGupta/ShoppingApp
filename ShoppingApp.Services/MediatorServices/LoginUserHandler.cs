@@ -16,10 +16,10 @@
     public class LoginUserHandler : IRequestHandler<LoginUser, ApiResponse>
     {
         private readonly LoginDetails loginDetails;
-        private readonly IDBServices _dbServices;
+        private readonly IProductDbServices _dbServices;
         private readonly ILogger<LoginUserHandler> _logger;
 
-        public LoginUserHandler(IOptions<LoginDetails> iLoginDetails, IDBServices dbServices, ILogger<LoginUserHandler> logger)
+        public LoginUserHandler(IOptions<LoginDetails> iLoginDetails, IProductDbServices dbServices, ILogger<LoginUserHandler> logger)
         {
             loginDetails = iLoginDetails.Value;
             _dbServices = dbServices;

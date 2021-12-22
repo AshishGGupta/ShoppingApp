@@ -12,6 +12,7 @@
     using System.Linq;
     using System.Threading.Tasks;
 
+    [Authorize]
     [ApiController]
     [ServiceFilter(typeof(ExceptionAttribute))]
     public class ProductsController : Controller
@@ -32,6 +33,7 @@
         /// <response code="200">Returned product detials</response>
         /// <response code="401">Unauthorized user</response>
         /// <response code="404">Product Details not found</response>
+        [AllowAnonymous]
         [HttpGet("product/GetProductList")]
         public async Task<IActionResult> GetProductList()
         {
@@ -51,6 +53,7 @@
         /// <response code="200">Returned product detials</response>
         /// <response code="401">Unauthorized user</response>
         /// <response code="404">Product Details not found</response>
+        [AllowAnonymous]
         [HttpPost("product/GetProductList")]
         public async Task<IActionResult> GetProductList([FromBody] SortAndFilter sortFilter)
         {
@@ -70,6 +73,7 @@
         /// <response code="200">Returned product detials</response>
         /// <response code="401">Unauthorized user</response>
         /// <response code="404">Product Details not found</response>
+        [AllowAnonymous]
         [HttpGet("product/GetProductById/{id}")]
         public async Task<IActionResult> GetProductById(int id)
         {
@@ -92,7 +96,6 @@
         /// <response code="401">Unauthorized user</response>
         /// <response code="404">Product Details not found</response>
         /// <response code="400">Some input value is not valid</response>
-        [Authorize]
         [HttpPost("Product/AddProduct")]
         public async Task<IActionResult> AddProduct([FromBody] Product product)
         {
@@ -116,7 +119,6 @@
         /// <response code="401">Unauthorized user</response>
         /// <response code="404">Product Details not found</response>
         /// <response code="400">Some input value is not valid</response>
-        [Authorize]
         [HttpPut("Product/UpdateProduct")]
         public async Task<IActionResult> UpdateProduct([FromBody] Product product)
         {
@@ -141,7 +143,6 @@
         /// <response code="200">Product deleted succsefully</response>
         /// <response code="401">Unauthorized user</response>
         /// <response code="404">Product Details not found</response>
-        [Authorize]
         [HttpDelete("product/DeleteProduct/{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {

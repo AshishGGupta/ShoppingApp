@@ -9,7 +9,6 @@
     using ShoppingApp.Models.Domain;
     using ShoppingApp.Models.MediatorClass;
     using ShoppingApp.Models.Model;
-    using ShoppingApp.Services.Services;
     using System;
     using System.Net.Http;
     using System.Text;
@@ -19,10 +18,10 @@
     public class SignUpHandler : IRequestHandler<Signup, ApiResponse>
     {
         private readonly SignUpDetails signupDetails;
-        private readonly IProductDbServices _dbServices;
+        private readonly IUserLoginLogoutDbServices _dbServices;
         private readonly ILogger<LoginUserHandler> _logger;
 
-        public SignUpHandler(IOptions<SignUpDetails> iSignupDetails, IProductDbServices dbServices, ILogger<LoginUserHandler> logger)
+        public SignUpHandler(IOptions<SignUpDetails> iSignupDetails, IUserLoginLogoutDbServices dbServices, ILogger<LoginUserHandler> logger)
         {
             signupDetails = iSignupDetails.Value;
             _dbServices = dbServices;
@@ -37,7 +36,7 @@
             };
             try
             {
-                if (await _dbServices.UserExists(userData.UserName))
+                if (!string.IsNullOrEmpty(await _dbServices.UserExists(userData.UserName)))
                 {
                     _logger.LogInformation("User already registered. userId: " + userData.UserName);
                     apiResponse.Message = "User already registered";

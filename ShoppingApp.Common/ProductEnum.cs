@@ -2,10 +2,10 @@
 {
     public enum ProductTypeEnum
     {
-        Name,
-        Category,
-        Price,
-        DateAdded,
-        ExpiryDate
+        Name = 1,
+        Category = 2,
+        Price = 3,
+        DateAdded = 4,
+        ExpiryDate = 5
     }
 }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ShoppingApp.DataAccess.DataAccess;
 
 namespace ShoppingApp.Migrations
 {
     [DbContext(typeof(ShoppingDbContext))]
-    partial class ShoppingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211223053347_AddedUsedLoginDetail")]
+    partial class AddedUsedLoginDetail
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

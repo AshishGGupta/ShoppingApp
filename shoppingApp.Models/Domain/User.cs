@@ -22,5 +22,8 @@
         
         [JsonIgnore]
         public ICollection<UserDetails> UserDetails { get; set; }
+
+        [JsonIgnore]
+        public ICollection<LoginUsersDetails> LoginDetails { get; set; }
     }
 }

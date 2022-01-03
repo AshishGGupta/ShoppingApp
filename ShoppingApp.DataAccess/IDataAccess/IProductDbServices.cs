@@ -7,10 +7,6 @@
 
     public interface IProductDbServices : IDbOperations<Product>
     {
-        //Login/signup
-        Task RegisterUser(User user);
-        Task<bool> UserExists(string userName);
-
         //product
         Task<List<Product>> GetProductList(SortAndFilter sortFilter);
         Task<List<Product>> GetProductByListOfId(List<string> productIdList);

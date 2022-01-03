@@ -8,7 +8,6 @@
     using ShoppingApp.Services.Validation;
     using System.Threading.Tasks;
 
-    [ServiceFilter(typeof(UserValidationAttribute))]
     [ServiceFilter(typeof(ExceptionAttribute))]
     public class UserController : Controller
     {
@@ -28,6 +27,7 @@
         /// <returns>api response success status</returns>
         /// <response code="200">User Signed up successfully</response>
         /// <response code="400">Some input value is not valid</response>
+        [ServiceFilter(typeof(UserValidationAttribute))]
         [HttpPost("User/SignUp")]
         public async Task<IActionResult> SignUp([FromBody] Signup userData)
         {
@@ -43,11 +43,30 @@
         /// <returns>api response success status</returns>
         /// <response code="200">User Logged in successfully</response>
         /// <response code="400">Some input value is not valid</response>
+        [ServiceFilter(typeof(UserValidationAttribute))]
         [HttpPost("User/Login")]
         public async Task<IActionResult> Login([FromBody] LoginUser userData)
         {
             _logger.LogInformation("Entering Login method");
             var response = await _mediator.Send(userData);
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// User Logout 
+        /// </summary>
+        /// <param name="userData">User Credentials</param>
+        /// <returns>api response success status</returns>
+        /// <response code="200">User Logged out successfully</response>
+        /// <response code="400">Some input value is not valid</response>
+        [HttpPost("User/Logout")]
+        public async Task<IActionResult> Logout([FromBody] LogoutUser userData)
+        {
+            _logger.LogInformation("Entering Logout method");
+            var response = await _mediator.Send(userData);
+            if (response)
+                _logger.LogInformation("User Logged our successfully");
+            _logger.LogInformation("User Logged our failed");
             return Ok(response);
         }
     }

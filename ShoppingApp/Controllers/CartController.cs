@@ -28,6 +28,7 @@
         /// Gets the cart details.
         /// </summary>
         /// <returns>Products added to the cart</returns>
+        [ServiceFilter(typeof(UserLoginValidator))]
         [HttpGet("Cart/GetCartDetails")]
         public IActionResult GetCartDetails()
         {

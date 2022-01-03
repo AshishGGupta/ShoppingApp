@@ -16,5 +16,6 @@
         public DbSet<Product> Products { get; set; }
         public DbSet<Cart> Cart { get; set; }
         public DbSet<OrderAndPayment> OrderAndPayments { get; set; }
+        public DbSet<LoginUsersDetails> LoginUsersDetails { get; set; }
     }
 }

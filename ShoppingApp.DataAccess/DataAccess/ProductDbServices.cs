@@ -20,17 +20,6 @@
             _sortAndFilter = sortAndFilter;
         }
 
-        public async Task RegisterUser(User user)
-        {
-            await _dbContext.Users.AddAsync(user);
-            await _dbContext.SaveChangesAsync();
-        }
-
-        public async Task<bool> UserExists(string userName)
-        {
-            return await _dbContext.Users.AnyAsync(x => x.UserName == userName);
-        }
-
         //Products
 
         public async Task<List<Product>> GetProductList(SortAndFilter sortFilter)

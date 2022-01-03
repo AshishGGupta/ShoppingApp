@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ShoppingApp.DataAccess.DataAccess;
 
 namespace ShoppingApp.Migrations
 {
     [DbContext(typeof(ShoppingDbContext))]
-    partial class ShoppingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211222132310_AddedUsedLoginDetails")]
+    partial class AddedUsedLoginDetails
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,11 +64,14 @@ namespace ShoppingApp.Migrations
 
                     b.Property<string>("TokenUserId")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserTokenUserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("LoginId");
 
-                    b.HasIndex("TokenUserId");
+                    b.HasIndex("UserTokenUserId");
 
                     b.ToTable("LoginUsersDetails");
                 });
@@ -211,9 +216,7 @@ namespace ShoppingApp.Migrations
                 {
                     b.HasOne("ShoppingApp.Models.Domain.User", "User")
                         .WithMany("LoginDetails")
-                        .HasForeignKey("TokenUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserTokenUserId");
 
                     b.Navigation("User");
                 });

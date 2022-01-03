@@ -44,6 +44,7 @@ namespace ShoppingApp
 
             services.AddMediatR(ServicesStaticClass.servicesAssembly);
             services.AddDbContext<ShoppingDbContext>(option => option.UseSqlServer(Configuration["ConnectionStrings:Name"]));
+            services.AddScoped<IUserLoginLogoutDbServices, UserLoginLogoutDbServices>();
             services.AddScoped<IProductDbServices, ProductDbServices>();
             services.AddScoped<ICartDbService, CartDbServices>();
             services.AddScoped<IDbInitializer, DbInitializer>();
@@ -56,6 +57,7 @@ namespace ShoppingApp
             services.AddScoped<ProductSortAndFilter>();
             services.AddScoped<IDbFacade, DbFacade>();
             services.AddScoped<UserValidationAttribute>();
+            services.AddScoped<UserLoginValidator>();
             services.AddScoped<ExceptionAttribute>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
